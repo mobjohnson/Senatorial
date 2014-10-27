@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027173834) do
+ActiveRecord::Schema.define(version: 20141027201755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20141027173834) do
     t.string  "phrase"
     t.integer "results1"
     t.integer "results2"
+  end
+
+  create_table "search_items_senators", id: false, force: true do |t|
+    t.integer "search_item_id", null: false
+    t.integer "senator_id",     null: false
   end
 
   create_table "senators", force: true do |t|
