@@ -6,6 +6,7 @@ class CreateSearchItems < ActiveRecord::Migration
       t.string :phrase
       t.integer :results1
       t.integer :results2
+      t.references :user, index: true
     end
   end
 end

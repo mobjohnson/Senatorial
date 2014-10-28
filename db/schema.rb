@@ -22,12 +22,18 @@ ActiveRecord::Schema.define(version: 20141027201755) do
     t.string  "phrase"
     t.integer "results1"
     t.integer "results2"
+    t.integer "user_id"
   end
+
+  add_index "search_items", ["user_id"], name: "index_search_items_on_user_id", using: :btree
 
   create_table "search_items_senators", id: false, force: true do |t|
     t.integer "search_item_id", null: false
     t.integer "senator_id",     null: false
   end
+
+  add_index "search_items_senators", ["search_item_id", "senator_id"], name: "index_search_items_senators_on_search_item_id_and_senator_id", using: :btree
+  add_index "search_items_senators", ["senator_id", "search_item_id"], name: "index_search_items_senators_on_senator_id_and_search_item_id", using: :btree
 
   create_table "senators", force: true do |t|
     t.string "sr_senator"
