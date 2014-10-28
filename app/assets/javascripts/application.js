@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require underscore
+//= require backbone
+//= require underscore
+//= require models/search_item
+//= require views/list_view
+//= require views/search_item_profile_view
+//= require routers/router
+//= require main
+
