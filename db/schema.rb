@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027201755) do
+ActiveRecord::Schema.define(version: 20141028195213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20141027201755) do
   create_table "senators", force: true do |t|
     t.string "sr_senator"
     t.string "jr_senator"
-    t.string "sr_ref"
-    t,string "jr_ref"
+    t.string "sr_member_ref"
+    t.string "jr_member_ref"
   end
 
   create_table "users", force: true do |t|
