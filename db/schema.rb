@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20141027201755) do
   create_table "senators", force: true do |t|
     t.string "sr_senator"
     t.string "jr_senator"
+    t.string "sr_ref"
+    t,string "jr_ref"
   end
 
   create_table "users", force: true do |t|

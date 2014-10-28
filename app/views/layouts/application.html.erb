@@ -4,11 +4,30 @@
   <title>Senatorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class='header'>
+    <div class='nav'>
+      <ul>
+        <li><a href="#search-items">SEARCH ITEM INDEX</a></li>
+      </ul>
+    </div> <!-- div.nav --> 
+  </div> <!-- div.header -->
+  <div class='content-wrapper'>
+      <%= yield %>
+  </div>
 
-<%= yield %>
+<script type="text/x-handlebars-template" id='search-item-list-item-template'>
+  {{#each collection}}
+  <li class='search-item'><a href="search_items/{{id}}">State: {{state1}}, Phrase: {{phrase}}</a></li>
+  {{/each}}
+</script>
 
-</body>
+ <!-- <script type='text/x-handlebars-template' id='search-item-profile-template'>
+//   <h1 class="{{" -->
+
+
 </html>
