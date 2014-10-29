@@ -5,7 +5,7 @@ var SearchItemView = Backbone.View.extend({
 
   events: {
     'click span.destroy': 'onDestroy',
-    'click span.edit': 'inEdit'
+    'click span.edit': 'onEdit'
   },
 
   initialize: function(){
