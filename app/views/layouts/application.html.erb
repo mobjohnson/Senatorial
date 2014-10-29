@@ -3,35 +3,20 @@
 <head>
   <title>Senatorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    
+  </header>
   <div id='search-item-form'></div>
   <div id='search-item-list'>
     <span class='add'>Add a Search Item</span>
   </div>
-  <div class='header'>
-    <div class='nav'>
-      <ul>
-        <li><a href="#search_items">SEARCH ITEM INDEX</a></li>
-      </ul>
-    </div> <!-- div.nav --> 
-  </div> <!-- div.header -->
-  <div class='content-wrapper'>
-      <%= yield %>
-  </div>
 
-<script type="text/x-handlebars-template" id='search-item-list-item-template'>
-  {{#each collection}}
-  <li class='search-item'><a href="search_items/{{id}}">State: {{state1}}, Phrase: {{phrase}}</a></li>
-  {{/each}}
-</script>
-
- <!-- <script type='text/x-handlebars-template' id='search-item-profile-template'>
-//   <h1 class="{{" -->
 
 <script type="text/x-handlebars-template" id="search-item-template">
   <div id={{id}}>
@@ -55,6 +40,20 @@
     <span class='cancel'>Cancel</span>
   </div>
 </script>
+
+<script>
+  App = {
+    Models: {},
+    Views: {},
+    Collections: {},
+    TempData: {}
+  };
+
+  // Instantiate searchItem collection. Does not fetch yet
+  App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
+</script>
+
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>
