@@ -27,7 +27,7 @@ App.SearchItemListView = Backbone.View.extend({
   },
 
   showForm: function() {
-    Router.navigate('search_items/new', { trigger: true});
+    App.router.navigate('search_items/new', { trigger: true});
   }
 
 });

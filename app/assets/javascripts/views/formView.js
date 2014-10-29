@@ -43,7 +43,7 @@ App.SearchItemFormView = Backbone.View.extend({
       success: function(){
         $('input').val('');
         $('#grumble-form').hide(100);
-        Router.navigate('')
+        App.router.navigate('')
       }
     });
   },
@@ -53,14 +53,14 @@ App.SearchItemFormView = Backbone.View.extend({
 
     this.model.save(data, {
       success: function() {
-        Router.navigate('/', { trigger: true });
+        App.router.navigate('/', { trigger: true });
       }
     });
   },
 
   cancel: function(){
     this.$el.fadeOut(200);
-    Router.navigate('')
+    App.router.navigate('')
   }
 
 
