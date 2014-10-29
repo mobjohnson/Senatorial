@@ -13,7 +13,7 @@ var SearchItemView = Backbone.View.extend({
     this.listenTo(this.model, 'change', this.render)
 
     var source = $('#search-item-template').html();
-    this.template = Handlers.compile(source);
+    this.template = Handlebars.compile(source);
 
     this.render();
   },

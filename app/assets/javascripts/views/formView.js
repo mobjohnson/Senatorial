@@ -1,6 +1,6 @@
 console.log('formView.js is connected')
 
-var SearchItemFormView = Backbone.View.extend({
+App.SearchItemFormView = Backbone.View.extend({
   el: '#search-item-form',
 
   events: {
@@ -56,7 +56,7 @@ var SearchItemFormView = Backbone.View.extend({
         Router.navigate('/', { trigger: true });
       }
     });
-  }
+  },
 
   cancel: function(){
     this.$el.fadeOut(200);

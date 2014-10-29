@@ -3,9 +3,6 @@
 <head>
   <title>Senatorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
-  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,8 +17,7 @@
 
 <script type="text/x-handlebars-template" id="search-item-template">
   <div id={{id}}>
-    <h5>{{state1}} and {{state2}}</h5>
-    <p>{{phrase}}</p>
+    <h5>{{state1}} and {{state2}} using search phrase {{phrase}}</h5>
     <span class='destroy'>Delete</span>
     <span class='edit'>Edit</span>
   </div>

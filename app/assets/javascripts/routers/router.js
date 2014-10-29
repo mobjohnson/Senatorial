@@ -11,7 +11,7 @@ App.Router = Backbone.Router.extend({
     // Instantiate searchItems collection. Does NOT fetch yet
     App.Collections.searchItems = new App.SearchItemCollection(App.TempData.searchItems);
     // Instantiate searchItem collection view, pass collection to it
-    App.Views.searchItemsListView = new App.SearchItemListView({collection: App.Collections.searchItems});
+    App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
   },
@@ -88,6 +88,4 @@ App.Router = Backbone.Router.extend({
 
   // },
 
-  
-
-});
+  });

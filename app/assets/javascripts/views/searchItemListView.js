@@ -1,7 +1,7 @@
-console.log('search_item_list_view.js is connected');
+console.log('searchItemListView.js is connected');
 
-var SearchItemListView = Backbone.View.extend({
-  el: '#seach-item-list',
+App.SearchItemListView = Backbone.View.extend({
+  el: '#search-item-list',
 
   events: {
     'click span.add':'showForm'
