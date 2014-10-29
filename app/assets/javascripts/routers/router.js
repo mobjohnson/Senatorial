@@ -4,7 +4,10 @@ App.Router = Backbone.Router.extend({
   routes: {
     '': 'index',
     'search_items/new': 'newSearchItem',
-    'search_items/:id/edit': 'editSearchItem'
+    'search_items/:id/edit': 'editSearchItem',
+    'senators/:state1/:phrase': 'getSenator'
+    // 'senators/:state2': 'newSenator'
+    // :state1 can be tet
   },
 
   initialize: function(){
