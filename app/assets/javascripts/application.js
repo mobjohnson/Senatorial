@@ -19,6 +19,8 @@
 //= require models/search_item
 //= require views/list_view
 //= require views/search_item_profile_view
+//= require views/searchItemListView
+//= require views/searchItemView
 //= require routers/router
 //= require main
 
