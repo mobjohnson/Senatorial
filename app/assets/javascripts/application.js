@@ -19,9 +19,13 @@
 //= require_self
 //= require routers/router
 //= require models/searchItemModel
+//= require models/senatorModel
 //= require collections/searchItemCollection
+//= require collections/senatorCollection
 //= require views/searchItemListView
 //= require views/searchItemView
+//= require views/senatorListView
+//= require views/senatorView
 //= require views/formView
 //= require_tree .
 

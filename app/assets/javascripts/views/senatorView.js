@@ -19,10 +19,6 @@ var SenatorView = Backbone.View.extend({
 
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
-  },
-
-  onRun: function(){
-    App.router.navigate('set_items/' + this.model.id + '/edit', { trigger: true});
   }
 
 });
