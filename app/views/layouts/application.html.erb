@@ -4,15 +4,19 @@
   <title>Senatorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</body>
+
   
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id='search-item-list'></div>
+  <div id='search-item-list'>
+    <span class='add'>Add a Search Item</span>
+  </div>
   <div class='header'>
     <div class='nav'>
       <ul>
-        <li><a href="#search-items">SEARCH ITEM INDEX</a></li>
+        <li><a href="#search_items">SEARCH ITEM INDEX</a></li>
       </ul>
     </div> <!-- div.nav --> 
   </div> <!-- div.header -->
@@ -29,5 +33,28 @@
  <!-- <script type='text/x-handlebars-template' id='search-item-profile-template'>
 //   <h1 class="{{" -->
 
+<script type="text/x-handlebars-template" id="search-item-template">
+  <div id={{id}}>
+    <h5>{{state1}} and {{state2}}</h5>
+    <p>{{phrase}}</p>
+    <span class='destroy'>Delete</span>
+    <span class='edit'>Edit</span>
+  </div>
+</script>
 
+<script type="text/x-handlebars-template" id='search-item-form-template'>
+  <div class='search-item-form-div'>
+    <input type="text" name="state1" value="first state" placeholder="{{state1}}">
+    <input type="text" name="state2" value="second state" placeholder="{{state2}}">
+    <input type="text" name="phrase" value="phrase" placeholder="{{phrase}}">
+    {{if this}}
+    <span class='edit-search-item'>Edit Search Item</span>
+    {{else}}
+    <span class='new-search-item'>New Search Item</span>
+    {{/if}}
+    <span class='cancel'>Cancel</span>
+  </div>
+</script>
+
+</body>
 </html>

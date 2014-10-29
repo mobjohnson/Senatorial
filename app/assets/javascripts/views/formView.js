@@ -1,4 +1,6 @@
-searchItemFormView = Backbone.View.extend({
+console.log('formView.js is connected')
+
+var SearchItemFormView = Backbone.View.extend({
   el: '#search-item-form',
 
   events: {

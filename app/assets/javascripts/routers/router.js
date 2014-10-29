@@ -4,7 +4,11 @@ var Router = Backbone.Router.extend({
   routes: {
     'search_items'    : 'listSearchItems',
     'search_items/:id': 'displaySearchItemDetail',
-    '*default'        : 'listSearchItems'
+    '*default'        : 'listSearchItems',
+    // second round of items
+    // '': 'index',
+    // 'search_items/new': 'newSearchItem',
+    // 'search_items/:id/edit': 'editSearchItem'
   },
 
   clearView: function(){

@@ -3,7 +3,7 @@ class SearchItemsController < ApplicationController
   before_action :set_search_item, only: [:show, :update, :destroy]
 
   def index
-    render json: SearchItem.all, statys: 200
+    render json: SearchItem.all, status: 200
   end
 
   def show

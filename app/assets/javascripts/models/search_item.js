@@ -9,7 +9,7 @@ var SearchItem = Backbone.Model.extend({
     state2: '',
     phrase: '',
     results1: 0,
-    results2: 0,
+    results2: 0
   }
 })
 
@@ -18,6 +18,12 @@ var SearchItem = Backbone.Model.extend({
 
 var SearchItemCollection = Backbone.Collection.extend({
   model: SearchItem,
-  url: '/search_items'
-})
+  url: '/search_items'// ,
+
+  // parse: function(data){
+  //   return data.muppets
+  // }
+});
+
+
 
