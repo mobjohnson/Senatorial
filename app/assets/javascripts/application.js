@@ -18,8 +18,11 @@
 //= require backbone
 //= require_self
 //= require routers/router
+//= require models/searchItemModel
+//= require collections/searchItemCollection
 //= require views/searchItemListView
 //= require views/searchItemView
+//= require views/formView
 //= require_tree .
 
 $(document).ready(function(){
