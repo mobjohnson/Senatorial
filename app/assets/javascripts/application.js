@@ -16,11 +16,18 @@
 //= require underscore
 //= require handlebars
 //= require backbone
+//= require_self
+//= require routers/router
 //= require models/search_item
 //= require views/list_view
 //= require views/search_item_profile_view
 //= require views/searchItemListView
 //= require views/searchItemView
-//= require routers/router
-//= require main
+//= require_tree .
+
+$(document).ready(function(){
+  App.router = new App/Router();
+  Backbone.history.start();
+});
+
 
