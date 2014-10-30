@@ -26,9 +26,4 @@ App.SenatorListView = Backbone.View.extend({
     },this)
   },
 
-// not using this?
-  // showForm: function() {
-  //   App.router.navigate('senators/new', { trigger: true});
-  // }
-
 });

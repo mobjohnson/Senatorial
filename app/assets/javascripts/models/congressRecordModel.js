@@ -19,7 +19,7 @@ App.ConressRecordModel = Backbone.Model.extend({
   getCongressRecords: function(state1, phrase){
     // Put state and phrase into url above?
 
-    // need to add senator bio
+    // need to add congressRecord bioguideid
     
     var CongRecordsArray = 
     // Parse data

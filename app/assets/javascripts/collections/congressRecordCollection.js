@@ -10,9 +10,9 @@ App.CongressRecordCollection = Backbone.Collection.extend({
     console.log('New Congress Record Collection');
   }
 
-  var senators = new App.CongressRecordCollection();
+  var congressRecords = new App.CongressRecordCollection();
 
-  senators.fetch().then(function(){
+  congressRecords.fetch().then(function(){
     // If senator_rank = senior
     // person.name
     // person.bioguideid
