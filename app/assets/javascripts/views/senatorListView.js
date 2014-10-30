@@ -3,9 +3,9 @@ console.log('senatorListView.js is connected');
 App.SenatorListView = Backbone.View.extend({
   el: '#senator-list',
 
-  events: {
-    'click span.add':'showForm'
-  },
+  // events: {
+  //   'click span.add':'showForm'
+  // },
 
   initialize: function(){
     console.log('New Senator View');
@@ -17,7 +17,7 @@ App.SenatorListView = Backbone.View.extend({
 
   addOne: function(senator){
     var senatorView = new SenatorView({ model: senator});
-    senatorView.$el.insertAfter(this.$('span.add'));
+    senatorView.$el.insertAfter(this.$('span.addsenator'));
   },
 
   addAll: function(){
@@ -26,8 +26,9 @@ App.SenatorListView = Backbone.View.extend({
     },this)
   },
 
-  showForm: function() {
-    App.router.navigate('senators/new', { trigger: true});
-  }
+// not using this?
+  // showForm: function() {
+  //   App.router.navigate('senators/new', { trigger: true});
+  // }
 
 });
