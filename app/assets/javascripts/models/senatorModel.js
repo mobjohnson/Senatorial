@@ -7,7 +7,9 @@ App.SenatorModel = Backbone.Model.extend({
     sr_senator: '',
     jr_senator: '',
     sr_member_ref '',
-    jr_member_ref ''
+    jr_member_ref '',
+    sr_member_records '',
+    jr_member_records ''
   },
 
   initialize: function(){

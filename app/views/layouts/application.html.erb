@@ -42,7 +42,9 @@
 
 <script type="text/x-handlebars-template" id="senator-template">
   <div id={{id}}>
-    <h5>{{sr_senator}} and {{jr_senator}}</h5>
+    <div class='senior senator'><h5>{{sr_senator}}</h5></div>
+    <div class='junior senator'><h5>{{jr_senator}}</h5></div>
+    // we are not really adding senators to a list, jsut showing above?
     <span class='addsenator'></span>
   </div>
 </script>
