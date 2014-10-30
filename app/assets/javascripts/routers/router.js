@@ -5,7 +5,7 @@ App.Router = Backbone.Router.extend({
     '': 'index',
     'search_items/new': 'newSearchItem',
     'search_items/:id/edit': 'editSearchItem',
-    'senators/:state1/:phrase': 'getSenator'
+    'senators/:state1/:state2/:phrase': 'runSearch'
     // 'senators/:state2': 'newSenator'
     // :state1 can be tet
   },
@@ -57,6 +57,13 @@ App.Router = Backbone.Router.extend({
 
     // Show form
     $('#search-item-form').show();
+  },
+    
+  runSearch: function(state1, state2, phrase){
+    console.log(state1, state2, phrase);
+    var activeSearch = new App.SearchItemModel({state1: state1, state2: state2, phrase: phrase});
+    console.log(activeSearch);
+ 
   }
 
 });
