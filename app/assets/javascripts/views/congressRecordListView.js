@@ -1,7 +1,7 @@
 console.log('congressRecordListView.js is connected');
 
 App.CongressRecordListView = Backbone.View.extend({
-  el: '#scongress-record-list',
+  el: '#congress-record-list',
 
   // events: {
   //   'click span.add':'showForm'

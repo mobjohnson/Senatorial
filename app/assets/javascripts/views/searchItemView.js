@@ -42,17 +42,4 @@ var SearchItemView = Backbone.View.extend({
       });
     }
   }
-
-  //  We are not doing onRun because we are doing a deep link 
-
-  //  onRun: function(){
-  //   console.log('I am here')
-  //   // base call
-  //   // 'https://www.govtrack.us/api/v2/role?role_type=senator&state=VA&current=true'
-  //   var response = new
-  //   App.router.navigate('https://www.govtrack.us/api/v2/role?role_type=senator&state=' + this.model.id + '/edit', { trigger: true});
-  //   // 
-  //   .fetch
-
-  // }
 });
