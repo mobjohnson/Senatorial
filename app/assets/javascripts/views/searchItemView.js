@@ -5,9 +5,8 @@ var SearchItemView = Backbone.View.extend({
 
   events: {
     'click span.destroy': 'onDestroy',
-    'click span.edit': 'onEdit'
-    // we are not doing onRun because we are using a deep link
-    // 'click span.run': 'onRun'
+    'click span.edit': 'onEdit',
+    'click a.runlink': 'onRun'
   },
 
   initialize: function(){
@@ -41,18 +40,12 @@ var SearchItemView = Backbone.View.extend({
         }
       });
     }
+  },
+
+
+  onRun: function(){
+    console.log('I am in onRun in SearchItemView')
+    // we want something like http://localhost:3000/#/senators/VA/MD/Iraq
+    App.router.navigate('/senators/' + this.model.state1 + '/' + this.model.state2 + '/' + this.model.phrase, { trigger: true });
   }
-
-  //  We are not doing onRun because we are doing a deep link 
-
-  //  onRun: function(){
-  //   console.log('I am here')
-  //   // base call
-  //   // 'https://www.govtrack.us/api/v2/role?role_type=senator&state=VA&current=true'
-  //   var response = new
-  //   App.router.navigate('https://www.govtrack.us/api/v2/role?role_type=senator&state=' + this.model.id + '/edit', { trigger: true});
-  //   // 
-  //   .fetch
-
-  // }
 });
