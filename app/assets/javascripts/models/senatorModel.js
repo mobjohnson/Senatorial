@@ -1,15 +1,16 @@
 App.SenatorModel = Backbone.Model.extend({
 
   // interpolate state1 on next line????
-  url: 'https://www.govtrack.us/api/v2/role?role_type=senator&state=(:state1)&current=true',
+  var urlState = :state1 // or this.state1?
+  url: "https://www.govtrack.us/api/v2/role?role_type=senator&state=" + urlState "&current=true",
 
   defaults:{
     sr_senator: '',
     jr_senator: '',
-    sr_member_ref '',
-    jr_member_ref '',
-    sr_member_records '',
-    jr_member_records ''
+    sr_member_ref: '',
+    jr_member_ref: '',
+    sr_member_records: '',
+    jr_member_records: ''
   },
 
   initialize: function(){
@@ -32,6 +33,7 @@ App.SenatorModel = Backbone.Model.extend({
     // Put state and phrase into url & fetch
     var CongRecordsArray = 
     // Parse data
+    // save gio record id
 
   }
 
