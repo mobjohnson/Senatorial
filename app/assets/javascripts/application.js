@@ -17,12 +17,10 @@
 //= require handlebars
 //= require backbone
 //= require_self
-//= require routers/router
-//= require models/searchItemModel
 //= require models/senatorModel
+//= require models/searchItemModel
 //= require models/congressRecordModel
 //= require collections/searchItemCollection
-//= require collections/senatorCollection
 //= require collections/congressRecordCollection
 //= require views/searchItemListView
 //= require views/searchItemView
@@ -31,7 +29,7 @@
 //= require views/congressRecordListView
 //= require views/congressRecordView
 //= require views/formView
-//= require_tree .
+//= require routers/router
 
 $(document).ready(function(){
   App.router = new App.Router();
