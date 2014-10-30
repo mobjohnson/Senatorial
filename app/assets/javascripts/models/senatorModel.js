@@ -21,7 +21,8 @@ App.SenatorModel = Backbone.Model.extend({
     // do fetch
     this.fetch({
       success: function(data){
-        console.log(data);
+        console.log('data', data);
+        console.log('this', this);
       },
     });
   },
