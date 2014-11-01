@@ -1,8 +1,5 @@
 App.SenatorModel = Backbone.Model.extend({
 
-  // interpolate state1 on next line????
-  // var urlState = :state1 // or this.state1?
-
   url: function(){
     return "https://www.govtrack.us/api/v2/role?role_type=senator&state=" + this.state + "&current=true";   
   },
@@ -23,29 +20,32 @@ App.SenatorModel = Backbone.Model.extend({
       success: function(data){
         console.log('data', data);
         console.log('this', this);
+        // this.
+        // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator = 
+       
+
+        this.sr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name;
+        console.log(this.sr_senator);
+        this.jr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[0].person.name;
+        console.log(this.jr_senator);
+      
+    
+        // returns first state 'VA'
+        // this.App.Collections.searchItems.models[0].attributes.state1
+
+        // can set the sr_senator name for first senator, currently ''
+        // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator
+
+        // returns name of first senator
+        // this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name
+
+        // returns bioguideid of first senator 'C001056'
+        // this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name
       },
     });
   },
 
-  // getSenator: function(state1, phrase){
-  //   // or getSenators???
-  //   // Put state into url & fetch
-  //   var senatorArray = 
-  //   // https://www.govtrack.us/api/v2/role?role_type=senator&state=VA&current=true
 
-  //   // Parse data
-  //   // Process data
-  //   // update model?
-  //   getCongRecords(state1, phrase);
-  // },
-
-  // getCongRecords: function(state1, phrase){
-  //   // Put state and phrase into url & fetch
-  //   var CongRecordsArray = 
-  //   // Parse data
-  //   // save gio record id
-
-  // }
 
 
 });
