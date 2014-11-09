@@ -6,8 +6,6 @@ App.Router = Backbone.Router.extend({
     'search_items/new': 'newSearchItem',
     'search_items/:id/edit': 'editSearchItem',
     'senators/:state1/:state2/:phrase': 'runSearch'
-    // 'senators/:state2': 'newSenator'
-    // :state1 can be tet
   },
 
   initialize: function(){
@@ -20,17 +18,12 @@ App.Router = Backbone.Router.extend({
   },
 
   index: function(){
-    // Fetch searchItem from server
-    // App.Collections.setItems.fetch({reset: true}); ////////////?????
     // Hide form, show list
     $('#search-item-form').hide();
     $('#search-item-list').show();
   },
 
   newSearchItem: function(){
-    // Fetch grumbles from server
-    // App.Collections.setItems.fetch({reset: true}); ////////////?????
-
     // Unset the model on formView if one exists
     App.Views.searchItemFormView.model = null;
 
