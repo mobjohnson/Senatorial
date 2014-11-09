@@ -17,10 +17,11 @@
 //= require handlebars
 //= require backbone
 //= require_self
-//= require models/senatorModel
 //= require models/searchItemModel
 //= require models/congressRecordModel
+//= require models/senatorModel
 //= require collections/searchItemCollection
+//= require collections/senatorCollection
 //= require collections/congressRecordCollection
 //= require views/searchItemListView
 //= require views/searchItemView
