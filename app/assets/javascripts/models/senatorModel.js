@@ -84,6 +84,7 @@ App.SenatorModel = Backbone.Model.extend({
         // this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name
       },
     });
+    // add instantiating congressModel like runSearch in searchItemModel
   },
 
 

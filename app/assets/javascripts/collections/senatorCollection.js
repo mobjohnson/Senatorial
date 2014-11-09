@@ -4,7 +4,7 @@ App.SenatorCollection = Backbone.Collection.extend({
   url: '/senators',
   parse: function(data){
     return data.objects;
-  }
+  },
   
   // $$$$$$$$$$$$$ 
   // this file is not being used?????
@@ -14,16 +14,16 @@ App.SenatorCollection = Backbone.Collection.extend({
     console.log('New Senator Collection');
   }
 
-  var senators = new App.SenatorCollection();
+  // var senators = new App.SenatorCollection();
 
-  senators.fetch().then(function(){
-    // If senator_rank = senior
-    // person.name
-    // person.bioguideid
-    // 
-    console.log('inside fetch');
-    console.log(this);
+  // senators.fetch().then(function(){
+  //   // If senator_rank = senior
+  //   // person.name
+  //   // person.bioguideid
+  //   // 
+  //   console.log('inside senator fetch');
+  //   console.log(this);
 
-  });
+  // });
 
 });

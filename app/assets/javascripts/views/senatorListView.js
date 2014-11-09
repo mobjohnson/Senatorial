@@ -4,13 +4,13 @@ App.SenatorListView = Backbone.View.extend({
   el: '#senator-list',
 
   // events: {
-  //   'click span.add':'showForm'
+  //   'click span.addsenator':'showForm'
   // },
 
   initialize: function(){
-    console.log('New Senator View');
-    this.listenTo(this.collection, 'add', this.addOne)
-    this.listenTo(this.collection, 'reset', this.addAll)
+    console.log('New Senator List View');
+    // this.listenTo(this.collection, 'add', this.addOne)
+    // this.listenTo(this.collection, 'reset', this.addAll)
 
     this.addAll();
   },
@@ -24,6 +24,10 @@ App.SenatorListView = Backbone.View.extend({
     this.collection.each(function(senator){
     this.addOne(senator);
     },this)
-  },
+  }
+
+  // showForm: function() {
+  //   App.router.navigate(senator)
+  // }
 
 });
