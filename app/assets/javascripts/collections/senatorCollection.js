@@ -5,6 +5,10 @@ App.SenatorCollection = Backbone.Collection.extend({
   parse: function(data){
     return data.objects;
   }
+  
+  // $$$$$$$$$$$$$ 
+  // this file is not being used?????
+  //  $$$$$$$$$$$$$
 
   initialize: function(){
     console.log('New Senator Collection');

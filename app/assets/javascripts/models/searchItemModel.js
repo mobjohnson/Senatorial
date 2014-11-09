@@ -1,7 +1,7 @@
 App.SearchItemModel = Backbone.Model.extend({
   initialize: function(params){
     console.log('search item data', params);
-    // add state and phrase tp params from router call
+    // add state and phrase to params from router call, used to instantiate senator model
     this.state1 = params.state1;
     this.state2 = params.state2;
     this.phrase = params.phrase;

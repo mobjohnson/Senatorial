@@ -4,6 +4,7 @@ App.SenatorModel = Backbone.Model.extend({
     return "https://www.govtrack.us/api/v2/role?role_type=senator&state=" + this.state + "&current=true";   
   },
 
+  // defaults for attributes from GovTrack.us
   defaults:{
     state: '',
     sr_senator: '',
@@ -16,11 +17,11 @@ App.SenatorModel = Backbone.Model.extend({
     this.state = params.state;
     console.log('state', this.state);
     // do fetch
-    this.fetch({
+    this.fetch({git push
       success: function(data){
         console.log('data', data);
         console.log('this', this);
-        // this.
+        // capture the five attributes
         // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator = 
        
 
