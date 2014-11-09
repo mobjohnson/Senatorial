@@ -5,7 +5,8 @@ App.Router = Backbone.Router.extend({
     '': 'index',
     'search_items/new': 'newSearchItem',
     'search_items/:id/edit': 'editSearchItem',
-    'senators/:state1/:state2/:phrase': 'runSearch'
+    'senators/:state1/:state2/:phrase': 'runSearch',
+    'congressRecords/:bioguideid/:phrase': 'runRecord'
   },
 
   initialize: function(){
@@ -15,6 +16,15 @@ App.Router = Backbone.Router.extend({
     App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
+    // Instantiate senators collection. Does NOT fetch yet
+    App.Collections.senators = new App.SenatorCollection(App.TempData.senators);
+    // Instantiate senator collection view, pass collection to it
+    App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
+    // Instantiate congressRecords collection.
+    // Does NOT fetch yet
+    App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
+    // Instantiate congressRecords collection view, pass collection to it
+    App.Views.congressRecordListView = new App.CongressRecordListView({collection: App.Collections.congressRecords});
   },
 
   index: function(){
@@ -57,6 +67,12 @@ App.Router = Backbone.Router.extend({
     var activeSearch = new App.SearchItemModel({state1: state1, state2: state2, phrase: phrase});
     console.log(activeSearch);
  
+  },
+
+  runRecord: function(phrase, bioguideid){
+    console.log(phrase, bioguideid);
+    var activeCongressRecord = new App.CongressRecordModel({phrase: phrase, bioguideid: bioguideid});
+    console.log(activeCongressRecord);
   }
 
 });
