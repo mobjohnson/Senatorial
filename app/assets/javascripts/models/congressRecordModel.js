@@ -1,8 +1,12 @@
 App.CongressRecordModel = Backbone.Model.extend({
 
   defaults:{
-    recordCount: 0,
-    recordMonth: ''
+    recordCount1: 0,
+    recordCount2: 0,
+    recordCount3: 0,
+    recordCount4: 0,
+    recordCount5: 0,  
+    recordCount6: 0  
   },
 
   initialize: function(){
