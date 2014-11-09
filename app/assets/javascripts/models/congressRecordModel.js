@@ -1,6 +1,8 @@
 App.CongressRecordModel = Backbone.Model.extend({
 
   defaults:{
+    name: '',
+    bioguideid: '',
     recordCount1: 0,
     recordCount2: 0,
     recordCount3: 0,
