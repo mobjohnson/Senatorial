@@ -26,36 +26,49 @@ App.SenatorModel = Backbone.Model.extend({
         // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator = 
        
         // ############# this shows all 8 senators in console log on last intialize#######
-        console.log('model[0]');
-        this.sr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
-        // following is empty on initial run through, but is there later?
-        this.jr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[1].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+        // console.log('model[0]');
+        // this.sr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // // following is empty on initial run through, but is there later?
+        // this.jr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[1].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
     
-        this.sr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[0].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
-        // 
-        this.jr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[1].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+        // this.sr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[0].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // // 
+        // this.jr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[1].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
      
 
-        console.log('model[1]');   
-        this.sr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[0].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
-        // 
-        this.jr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[1].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+        // console.log('model[1]');   
+        // this.sr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[0].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // // 
+        // this.jr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[1].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
     
-        this.sr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[0].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
-        // 
-        this.jr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[1].person.name;
-        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+        // this.sr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[0].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // // 
+        // this.jr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[1].person.name;
+        // console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
 // ############# ##################################################################
+        
+        // console.log('senatorModel (this.data.changed.objects[0].person.name) this.sr_senator: ',this.sr_senator);
+        // sets sr_senator based upon data.changed
+        this.sr_senator = data.changed.objects[0].person.name;
+        console.log('senatorModel (data.changed.objects[0].person.name) this.sr_senator: ',this.sr_senator);
+        // sets jr_senator based upon data.changed
+        this.jr_senator = data.changed.objects[1].person.name;
+        console.log('senatorModel (data.changed.objects[1].person.name) this.jr_senator: ', this.jr_senator);
+        // sets sr_member_ref
+        this.sr_member_ref = data.changed.objects[0].person.bioguideid;
+        console.log('senatorModel (data.changed.objects[0].person.bioguideid) this.sr_member_ref: ', this.sr_member_ref);       
+       // sets jr_member_ref
+        this.jr_member_ref = data.changed.objects[1].person.bioguideid;
+        console.log('senatorModel (data.changed.objects[1].person.bioguideid) this.jr_member_ref: ', this.jr_member_ref);  
 
 
-        // save to local jr_senator for just this iteration?
 
 
         // returns first state 'VA'
