@@ -25,6 +25,7 @@ App.SenatorModel = Backbone.Model.extend({
         // capture the five attributes
         // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator = 
        
+        // ############# this shows all 8 senators in console log on last intialize#######
         console.log('model[0]');
         this.sr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name;
         console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
@@ -51,6 +52,11 @@ App.SenatorModel = Backbone.Model.extend({
         // 
         this.jr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[1].person.name;
         console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+// ############# ##################################################################
+
+
+        // save to local jr_senator for just this iteration?
+
 
         // returns first state 'VA'
         // this.App.Collections.searchItems.models[0].attributes.state1
