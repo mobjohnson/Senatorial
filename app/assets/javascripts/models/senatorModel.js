@@ -15,22 +15,43 @@ App.SenatorModel = Backbone.Model.extend({
 
   initialize: function(params){
     this.state = params.state;
-    console.log('state', this.state);
+    console.log('senatorModel (#initialize) this.state', this.state);
     // do fetch
-    this.fetch({git push
+    this.fetch({
       success: function(data){
-        console.log('data', data);
-        console.log('this', this);
+        console.log('Beginning of initialize method');
+        console.log('senatorModel (#initialize/this.fetch/#success) data:', data);
+        console.log('senatorModel (#initialize/this.fetch/#success) this', this);
         // capture the five attributes
         // this.App.Collections.searchItems.models[0].state1Senator.attributes.sr_senator = 
        
-
+        console.log('model[0]');
         this.sr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[0].person.name;
-        console.log(this.sr_senator);
-        this.jr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[0].person.name;
-        console.log(this.jr_senator);
-      
+        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // following is empty on initial run through, but is there later?
+        this.jr_senator = this.App.Collections.searchItems.models[0].state1Senator.attributes.objects[1].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
     
+        this.sr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[0].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // 
+        this.jr_senator = this.App.Collections.searchItems.models[0].state2Senator.attributes.objects[1].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+     
+
+        console.log('model[1]');   
+        this.sr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[0].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // 
+        this.jr_senator = this.App.Collections.searchItems.models[1].state1Senator.attributes.objects[1].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+    
+        this.sr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[0].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.sr_senator: ',this.sr_senator);
+        // 
+        this.jr_senator = this.App.Collections.searchItems.models[1].state2Senator.attributes.objects[1].person.name;
+        console.log('senatorModel (#initialize/this.fetch/#success) this.jr_senator: ', this.jr_senator);
+
         // returns first state 'VA'
         // this.App.Collections.searchItems.models[0].attributes.state1
 
