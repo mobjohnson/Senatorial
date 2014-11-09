@@ -6,9 +6,9 @@ App.SearchItemModel = Backbone.Model.extend({
     this.state2 = params.state2;
     this.phrase = params.phrase;
     // create new senatorModel and adding attributes to this model for state1Senator
-    this.state1Senator = new App.SenatorModel({state: params.state1});
+    this.state1Senator = new App.SenatorModel({phrase: params.phrase, state: params.state1});
     // creating new senatorModel and adding attributes to this model for state1Senator
-    this.state2Senator = new App.SenatorModel({state: params.state2}); 
+    this.state2Senator = new App.SenatorModel({phrase: params.phrase, state: params.state2}); 
   },
 
 

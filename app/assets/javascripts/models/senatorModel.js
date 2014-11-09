@@ -6,6 +6,7 @@ App.SenatorModel = Backbone.Model.extend({
 
   // defaults for attributes for state, name and bioguideid from GovTrack.us
   defaults:{
+    phrase: '',
     state: '',
     sr_senator: '',
     jr_senator: '',
@@ -14,6 +15,7 @@ App.SenatorModel = Backbone.Model.extend({
   },
 
   initialize: function(params){
+    this.phrase = params.phrase;
     this.state = params.state;
     console.log('senatorModel (#initialize) this.state', this.state);
     // do fetch
@@ -37,9 +39,9 @@ App.SenatorModel = Backbone.Model.extend({
         this.jr_member_ref = data.changed.objects[1].person.bioguideid;
         console.log('senatorModel (data.changed.objects[1].person.bioguideid) this.jr_member_ref: ', this.jr_member_ref);  
         // creating new congressRecordModel and adding sttributes to this model for sr_senator
-        this.RecordArray1 = new App.CongressRecordModel({phrase: params.phrase, name: sr_senator, bioguideid: sr_member_ref});
+        this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.sr_senator, bioguideid: this.sr_member_ref});
         // creating new congressRecordModel and adding sttributes to this model for jr_senator
-        this.RecordArray1 = new App.CongressRecordModel({phrase: params.phrase, name: jr_senator, bioguideid: jr_member_ref});
+        this.Record1 = new App.CongressRecordModel({phrase: this.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
       },
 
     });
