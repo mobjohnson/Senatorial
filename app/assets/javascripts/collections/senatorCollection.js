@@ -5,25 +5,10 @@ App.SenatorCollection = Backbone.Collection.extend({
   parse: function(data){
     return data.objects;
   },
-  
-  // $$$$$$$$$$$$$ 
-  // this file is not being used?????
-  //  $$$$$$$$$$$$$
 
   initialize: function(){
     console.log('New Senator Collection');
   }
 
-  // var senators = new App.SenatorCollection();
-
-  // senators.fetch().then(function(){
-  //   // If senator_rank = senior
-  //   // person.name
-  //   // person.bioguideid
-  //   // 
-  //   console.log('inside senator fetch');
-  //   console.log(this);
-
-  // });
 
 });
