@@ -11,12 +11,7 @@ App.CongressRecordModel = Backbone.Model.extend({
     phrase: '',
     senator_name: '',
     bioguideid: '',
-    recordCount1: 0,
-    recordCount2: 0,
-    recordCount3: 0,
-    recordCount4: 0,
-    recordCount5: 0,  
-    recordCount6: 0  
+    recordCounts: [] 
   },
 
   initialize: function(params){
@@ -33,7 +28,9 @@ App.CongressRecordModel = Backbone.Model.extend({
         console.log('Beginning of initialize method');
         console.log('congressRecordModel (#initialize/this.fetch/#success data:', data);
         console.log('congressRecordModel (#initiale/this.fetch/#success this:', this);
-
+        // set recordCounts to array of Congress Records matching criteria
+        this.recordCounts = data.attributes.results
+        console.log('congressRecordModel (initialize/this.fetch/#success data.attributes.results: ', recordCounts);
 
 
 
