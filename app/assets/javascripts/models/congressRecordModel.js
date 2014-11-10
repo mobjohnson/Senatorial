@@ -23,10 +23,10 @@ App.CongressRecordModel = Backbone.Model.extend({
 
     this.phrase = params.phrase;
     this.senator_name = params.senator_name;
-    this.biobuideid = params.bioguideid;
-    console.log('congressModel (#initialize) this.phrase', this.phrase);   
-    console.log('congressModel (#initialize) this.senator_name', this.senator_name);
-    console.log('congressModel (#initialize) this.bioguideid', this.bioguideid);
+    this.bioguideid = params.bioguideid;
+    console.log('congressModel (#initialize) this.phrase: ', this.phrase);   
+    console.log('congressModel (#initialize) this.senator_name: ', this.senator_name);
+    console.log('congressModel (#initialize) this.bioguideid: ', this.bioguideid);
     // do fetch
     this.fetch({
       success: function(data){
