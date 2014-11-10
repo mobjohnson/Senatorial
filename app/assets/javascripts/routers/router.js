@@ -19,7 +19,7 @@ App.Router = Backbone.Router.extend({
     // Instantiate senators collection. Does NOT fetch yet
     App.Collections.senators = new App.SenatorCollection(App.TempData.senators);
     // Instantiate senator collection view, pass collection to it
-    App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
+    App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senator});
     // Instantiate congressRecords collection.
     // Does NOT fetch yet
     App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
