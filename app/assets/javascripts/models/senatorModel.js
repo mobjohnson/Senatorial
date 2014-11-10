@@ -41,7 +41,7 @@ App.SenatorModel = Backbone.Model.extend({
         // creating new congressRecordModel and adding sttributes to this model for sr_senator
         this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.sr_senator, bioguideid: this.sr_member_ref});
         // creating new congressRecordModel and adding sttributes to this model for jr_senator
-        this.Record1 = new App.CongressRecordModel({phrase: this.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
+        this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
       },
 
     });
