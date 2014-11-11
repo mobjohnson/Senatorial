@@ -1,7 +1,7 @@
 App.CongressRecordCollection = Backbone.Collection.extend({
 
   model: App.CongressRecordModel,
-  url: '/congressRecords',
+  url: '/congress_records',
   parse: function(data){
     return data.objects;
   },

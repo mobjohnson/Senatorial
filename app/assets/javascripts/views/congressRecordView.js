@@ -1,7 +1,7 @@
 console.log('congressRecordView connected');
 
-var congressRecordView = Backbone.View.extend({
-  className: 'congressrecord',
+var CongressRecordView = Backbone.View.extend({
+  className: 'congress-record',
 
   initialize: function(){
     console.log('New Congress Record View');
