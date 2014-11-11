@@ -6,7 +6,7 @@ App.Router = Backbone.Router.extend({
     'search_items/new': 'newSearchItem',
     'search_items/:id/edit': 'editSearchItem',
     'senators/:state1/:state2/:phrase': 'runSearch',
-    'congressRecords/:bioguideid/:phrase': 'runRecord'
+    'congress_records/:bioguideid/:phrase': 'runRecord'
   },
 
   initialize: function(){
@@ -31,6 +31,8 @@ App.Router = Backbone.Router.extend({
     // Hide form, show list
     $('#search-item-form').hide();
     $('#search-item-list').show();
+    // %('#congress-record-list').show();
+
   },
 
   newSearchItem: function(){
@@ -63,14 +65,14 @@ App.Router = Backbone.Router.extend({
   },
     
   runSearch: function(state1, state2, phrase){
-    console.log(state1, state2, phrase);
+    console.log('in runSearch', state1, state2, phrase);
     var activeSearch = new App.SearchItemModel({state1: state1, state2: state2, phrase: phrase});
     console.log(activeSearch);
  
   },
 
   runRecord: function(phrase, bioguideid){
-    console.log(phrase, bioguideid);
+    console.log('in runRecord',phrase, bioguideid);
     var activeCongressRecord = new App.CongressRecordModel({phrase: phrase, bioguideid: bioguideid});
     console.log(activeCongressRecord);
   }
