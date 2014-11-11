@@ -16,6 +16,8 @@
 //= require underscore
 //= require handlebars
 //= require backbone
+//= require d3
+//= require c3
 //= require_self
 //= require models/searchItemModel
 //= require models/congressRecordModel
