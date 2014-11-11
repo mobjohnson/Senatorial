@@ -44,5 +44,8 @@ gem 'spring',        group: :development
 
  gem 'devise'
 
+ gem 'rails-erd'
 
- gem "rails-erd"
+ gem 'd3-rails'
+
+ gem 'c3-rails'
