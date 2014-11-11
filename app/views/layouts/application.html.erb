@@ -3,7 +3,6 @@
 <head>
   <title>Senatorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link href="c3.css" rel="stylesheet" type="text/css">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -14,11 +13,13 @@
   <div id='search-item-list'>
     <span class='add'>Add a Search Item</span>
   </div>
+  <!-- Not used yet???  -->
   <div id='senator-list'>
-    <span class='addsenator'></span>
+    <span class='addsenator'>Senator span</span>
   </div>
-    <div id='congress-record-list'>
-    <span class='addcongressrecord'></span>
+  <!-- where charts are added -->
+  <div id='congress-record-list'>
+    <span class='add-congress-record'>Congress Record Span</span>
   </div>
 
 
@@ -36,6 +37,7 @@
   </div>
 </script>
 
+<!-- Template for adding new searchItems -->
 <script type="text/x-handlebars-template" id='search-item-form-template'>
   <div class='search-item-form-div'>
     <input type="text" name="state1" value="first state" placeholder="{{state1}}">
@@ -50,7 +52,10 @@
   </div>
 </script>
 
-<!-- Senators, or just one at a time??? -->
+<!-- Template for adding new senators, but are not adding senators by a template -->
+
+<!-- Not used yet!!!!  -->
+
 <script type="text/x-handlebars-template" id="senator-template">
   <div id={{id}}>
     <div class='senior senator'><h5>{{this.sr_senator}}</h5></div>
@@ -60,13 +65,16 @@
   </div>
 </script>
 
-<!-- CongressRecords -->
+<!-- Template for adding new senators, but are not adding senators by a template -->
+
+<!-- not used yet? -->
 <script type="text/x-handlebars-template" id="congress-record-template">
   <div id={{id}}>
-    <div class='congressrecord'><h5>{{congressrecord}}</h5></div>
-    <div class='congressrecorddate'><h5>{{congressrecorddate}}</h5></div>
-    // we are not really adding senators to a list, just showing above?
-    <span class='addcongressrecord'></span>
+    <p> Line Chart goes here </p>
+    // add linegraph
+    <div id="chart"></div>
+    // new line charts are addded below this span r within?
+    // <!-- <span class='addcongressrecord'></span> -->
   </div>
 </script>
 
@@ -80,6 +88,13 @@
 
   // Instantiate searchItem collection. Does not fetch yet
   App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
+    // Instantiate senator collection. Does not fetch yet
+
+    // this is not calling a back-end
+    
+  App.TempData.senators = <%= @senators.to_json.html_safe %>;
+    // Instantiate congressRecord collection. Does not fetch yet
+  App.TempData.congressRecords = <%= @congress_records.to_json.html_safe %>;
 </script>
 
 <%= javascript_include_tag "application" %>
