@@ -17,6 +17,8 @@ App.SenatorModel = Backbone.Model.extend({
   initialize: function(params){
     this.phrase = params.phrase;
     this.state = params.state;
+    this.Record1 = [],
+    this.Record2 = [],
     console.log('senatorModel (#initialize) this.state', this.state);
     // do fetch
     this.fetch({
