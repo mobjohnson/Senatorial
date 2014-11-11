@@ -11,15 +11,25 @@ App.Router = Backbone.Router.extend({
 
   initialize: function(){
     // Instantiate searchItems collection. Does NOT fetch yet
-    App.Collections.searchItems = new App.SearchItemCollection(App.TempData.searchItems);
+    App.Collections.searchItems = new App.SearchItemCollection(App.TempData.searchItems);    
     // Instantiate searchItem collection view, pass collection to it
     App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
+
+
+    // Need to instantiate Models before Collections. Here or in application.html.erb
+
+
     // Instantiate senators collection. Does NOT fetch yet
     App.Collections.senators = new App.SenatorCollection(App.TempData.senators);
     // Instantiate senator collection view, pass collection to it
     App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
+
+
+    // Need to instantiate congressRecords before Collections
+
+
     // Instantiate congressRecords collection.
     // Does NOT fetch yet
     App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
