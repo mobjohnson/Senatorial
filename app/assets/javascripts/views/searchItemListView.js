@@ -9,21 +9,23 @@ App.SearchItemListView = Backbone.View.extend({
 
   initialize: function(){
     console.log('New Search Item List View');
-    this.listenTo(this.collection, 'add', this.addOne)
-    this.listenTo(this.collection, 'reset', this.addAll)
+    this.listenTo(this.collection, 'add', this.addOne);
+    this.listenTo(this.collection, 'reset', this.addAll);
 
     this.addAll();
   },
 
   addOne: function(searchItem){
+    console.log('inside searchItemListView#addOne this:', this);
     var searchItemView = new SearchItemView({ model: searchItem});
     searchItemView.$el.insertAfter(this.$('span.add'));
   },
 
   addAll: function(){
+    console.log('inside searchItemListView#addAll this:', this);
     this.collection.each(function(searchItem){
-    this.addOne(searchItem);
-    },this)
+      this.addOne(searchItem);
+    },this);
   },
 
   showForm: function() {

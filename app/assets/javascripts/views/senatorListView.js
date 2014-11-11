@@ -5,6 +5,7 @@ App.SenatorListView = Backbone.View.extend({
 
   initialize: function(){
     console.log('New Senator List View');
+    // this.collection.fetch();
     this.addAll();
   },
 

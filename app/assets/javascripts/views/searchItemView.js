@@ -11,7 +11,7 @@ var SearchItemView = Backbone.View.extend({
 
   initialize: function(){
     console.log('New Search Item View');
-    this.listenTo(this.model, 'change', this.render)
+    this.listenTo(this.model, 'change', this.render);
 
     var source = $('#search-item-template').html();
     this.template = Handlebars.compile(source);
