@@ -12,20 +12,20 @@ App.CongressRecordListView = Backbone.View.extend({
     this.addAll();
   },
 
-  addOne: function(congressRecord){
+  addOne: function(congressRecord, el){
     console.log('inside congressRecordListView#addOne this:', this);
     var congressRecordView = new CongressRecordView({ model: congressRecord});
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));
-    // var chart = c3.generate({
-    //   // bindto: '#chart',
-    //   data: {
-    //     columns: [
-    //       ['data1', 30, 200, 100, 400, 150, 250],
-    //       ['data2', 50, 20, 10, 40, 15, 25]
-    //     ]
-    //   }
-    // });
-    // $(el).append(chart.element);
+    var chart = c3.generate({
+      bindto: '#chart',
+      data: {
+        columns: [
+          ['data1', 30, 200, 100, 400, 150, 250],
+          ['data2', 50, 20, 10, 40, 15, 25]
+        ]
+      }
+    });
+
   },
 
   addAll: function(){

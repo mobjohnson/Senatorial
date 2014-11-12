@@ -24,18 +24,19 @@ App.CongressRecordModel = Backbone.Model.extend({
     console.log('congressModel (#initialize) this.bioguideid: ', this.bioguideid);
     console.log('congressRecordModel (#initialize) this:', this);
     // do fetch
-    this.fetch({
-      success: function(data){
+    if (this.phrase){
+      this.fetch({
+        success: function(data){
         console.log('Beginning of initialize method');
         console.log('congressRecordModel (#initialize/this.fetch/#success data:', data);
         console.log('congressRecordModel (#initialize/this.fetch/#success this:', this);
         // set recordCounts to array of Congress Records matching criteria
         this.recordCounts = data.attributes.results
         console.log('congressRecordModel (initialize/this.fetch/#success data.attributes.results: ', this.recordCounts);
-
-      }
-
-    });
+        }
+      });
+    }
+                                
     console.log('post fetch congressRecordModel (#initialize) this:', this);
 
   }
