@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <h2>SITE UNDER CONSTRUCTION!!! Return on Monday, November 17th</h2>
+    <h4>SITE UNDER CONSTRUCTION!!! Return on Monday, November 17th</h4>
   </header>
   <div id='search-item-form'></div>
   <div id='search-item-list'>
@@ -58,7 +58,6 @@
 
 <script type="text/x-handlebars-template" id="senator-template">
   <div id={{id}}>
-    <p>Senator goes here</p>
     <div class='senior senator'><h5>{{this.sr_senator}}</h5></div>
     <div class='junior senator'><h5>{{this.jr_senator}}</h5></div>
     <span class='addsenator'></span>
@@ -67,12 +66,11 @@
 
 <!-- Template for adding new senators, but are not adding senators by a template -->
 
-<!-- line chart goes here -->
 <script type="text/x-handlebars-template" id="congress-record-template">
   <div id={{id}}>
-    <p> Line Chart goes here </p>
-    <div id="chart"></div>
+    <div id="chart{{id}}"></div>
   </div>
+
 </script>
 
 <script>
