@@ -19,6 +19,7 @@ App.Router = Backbone.Router.extend({
 
 
     // Need to instantiate Models before Collections. Here or in application.html.erb
+    App.Models.senators = new App.SenatorModel(App.TempData)
 
 
     // Instantiate senators collection. Does NOT fetch yet
