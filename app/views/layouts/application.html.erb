@@ -56,19 +56,23 @@
 
 <!-- Not used yet!!!!  -->
 
-// <script type="text/x-handlebars-template" id="senator-template">
-//   <div id={{id}}>
-//     <div class='senior senator'><h5>{{this.sr_senator}}</h5></div>
-//     <div class='junior senator'><h5>{{this.jr_senator}}</h5></div>
+ <script type="text/x-handlebars-template" id="senator-template">
+
     <span class='addsenator'>New Senator</span>
-//   </div>
-// </script>
+  </div>
+ </script>
 
 <!-- Template for adding new scongressRecords, but are not adding senators by a template -->
 
 <script type="text/x-handlebars-template" id="congress-record-template">
   <div id={{id}}>
-    <div id="chart{{id}}">New congressRecords</div>
+    <div id="chart1{{id}}">New congressRecords chart</div>
+    <div id="chart2{{id}}">New congressRecords chart</div>
+    <span class='add-congress-record'>new congress record</span>
+
+    <div id={{id}}>
+    <h5>senator_name: {{senator_name}} with bioguideid: {{bioguideid}}, having recordCounts: {{recordCounts}}</h5>
+    </div>
   </div>
 
 </script>
