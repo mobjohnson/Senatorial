@@ -25,30 +25,30 @@ App.CongressRecordListView = Backbone.View.extend({
     var senator3Array = [];
     var senator4Array = [];
     // Add the senator's name to the front of the array
-    // if (models === undefined) {
-    // } else {
-    //   console.log('breakpoint');
-    //   for (var i = 0; i < models.length; i++) {
-    //     // console.log('+++ inside congressRecordListView for loop models[i]':, models[i])
-    //     switch (i) {
-    //       case 0:
-    //       senator1Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 1:
-    //       senator2Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 2:
-    //       senator3Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 3:
-    //       senator4Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       default:
-    //       console.log('*** no match in for switch. i: ', i);
-    //     }
-    //     senatorCounter += 1      
-    //   }
-    // }
+    if (this.model === undefined) {
+    } else {
+      console.log('breakpoint');
+      for (var i = 0; i < models.length; i++) {
+        // console.log('+++ inside congressRecordListView for loop models[i]':, models[i])
+        switch (i) {
+          case 0:
+          senator1Array.push(models[i].attributes.senator_name);
+          break;
+          case 1:
+          senator2Array.push(models[i].attributes.senator_name);
+          break;
+          case 2:
+          senator3Array.push(models[i].attributes.senator_name);
+          break;
+          case 3:
+          senator4Array.push(models[i].attributes.senator_name);
+          break;
+          default:
+          console.log('*** no match in for switch. i: ', i);
+        }
+        senatorCounter += 1      
+      }
+    }
 
     console.log('*** senator1Array: ', senator1Array);
     console.log('*** senator4Array: ', senator4Array);  

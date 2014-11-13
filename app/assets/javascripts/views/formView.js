@@ -18,10 +18,9 @@ App.SearchItemFormView = Backbone.View.extend({
   },
 
   render: function(){
-    if (this.model) {
+    if (this.model === undefined) {
+    } else {
       this.$el.html(this.template(this.model.toJSON()));
-    }
-    else {
       this.$el.html(this.template());
     }
   },
