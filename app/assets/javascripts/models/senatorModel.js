@@ -17,8 +17,8 @@ App.SenatorModel = Backbone.Model.extend({
   initialize: function(params){
     this.phrase = params.phrase;
     this.state = params.state;
-    this.Record1 = [],
-    this.Record2 = [],
+    this.Record1 ='',
+    this.Record2 = '',
     console.log('senatorModel (#initialize) this.state', this.state);
     // do fetch
     if (this.state) {
@@ -37,8 +37,7 @@ App.SenatorModel = Backbone.Model.extend({
               // sets sr_member_ref
               this.sr_member_ref = data.changed.objects[0].person.bioguideid;
             } else {
-              // this.sr_senator = '';
-              // this.sr_member_ref = '';
+ 
             }
             console.log('senatorModel (data.changed.objects[0].person.name) this.sr_senator: ',this.sr_senator);
             // sets jr_senator based upon data.changed
@@ -47,8 +46,7 @@ App.SenatorModel = Backbone.Model.extend({
               // sets jr_member_ref
               this.jr_member_ref = data.changed.objects[1].person.bioguideid;
             } else {
-              // this.jr_senator = '';
-              // this.jr_member_ref = '';
+
 
             }
             console.log('senatorModel (data.changed.objects[1].person.name) this.jr_senator: ', this.jr_senator);

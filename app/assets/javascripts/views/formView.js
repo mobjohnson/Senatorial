@@ -10,7 +10,7 @@ App.SearchItemFormView = Backbone.View.extend({
   },
 
   initialize: function(){
-    console.log('New Form View');
+    console.log('New Search Item Form View');
 
     var source = $('#search-item-form-template').html();
     this.template = Handlebars.compile(source);

@@ -1,7 +1,5 @@
 App.CongressRecordModel = Backbone.Model.extend({
 
-  // API url for Capital Words
-  // Sample: http://capitolwords.org/api/1/dates.json?phrase=Iraq&entity_value=W000805&start_date= 2014-04-01&end_date=2014-10-01&granularity=month&apikey=3fdb489020354ae7b4e1a1bf75b4a279
   url: function(){
     return "http://capitolwords.org/api/1/dates.json?phrase=" + this.phrase + "&entity_value=" + this.bioguideid + "&start_date= 2014-04-01&end_date=2014-11-01&granularity=month&apikey=3fdb489020354ae7b4e1a1bf75b4a279"
   },
@@ -19,8 +17,8 @@ App.CongressRecordModel = Backbone.Model.extend({
     this.phrase = params.phrase;
     this.senator_name = params.senator_name;
     this.bioguideid = params.bioguideid;
-    console.log('congressModel (#initialize) this.phrase: ', this.phrase);   
-    console.log('congressModel (#initialize) this.senator_name: ', this.senator_name);
+    console.log('congressRecordModel (#initialize) this.phrase: ', this.phrase);   
+    console.log('congressRecordModel (#initialize) this.senator_name: ', this.senator_name);
     console.log('congressModel (#initialize) this.bioguideid: ', this.bioguideid);
     console.log('congressRecordModel (#initialize) this:', this);
     // do fetch
