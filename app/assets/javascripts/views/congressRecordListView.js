@@ -17,45 +17,16 @@ App.CongressRecordListView = Backbone.View.extend({
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));
     var models = this.collection.models;
     console.log(' --- models in congressRecordListView', models)
-    var senatorArray = [];
-    // var senatorCounter = 0;
-    // var senator1Array = [];
-    // var senator2Array = [];
-    // var senator3Array = [];
-    // var senator4Array = [];
-    // // Add the senator's name to the front of the array
-    // if (this.model === undefined) {
-    // } else {
-    //   console.log('breakpoint');
-    //   for (var i = 0; i < models.length; i++) {
-    //     // console.log('+++ inside congressRecordListView for loop models[i]':, models[i])
-    //     switch (i) {
-    //       case 0:
-    //       senator1Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 1:
-    //       senator2Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 2:
-    //       senator3Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       case 3:
-    //       senator4Array.push(models[i].attributes.senator_name);
-    //       break;
-    //       default:
-    //       console.log('*** no match in for switch. i: ', i);
-    //     }
+    this.senatorArray = [];
+ 
+    // Add senator name to array
+    this.senatorArray.push(this.collection.models[0].attributes.senator_name);
+    // Add data to array
 
-    //     senatorCounter += 1      
-    //   }
-    // }
-    senatorArray.push(this.collection.models[0].attributes.senator_name);
-    // var recordArray = this.collection.models[0].attributes.senator_name
-
-    console.log('*** senator1Array: ', senatorArray);
-    // console.log('*** senator4Array: ', senator4Array);  
-
-
+    console.log('*** senatorArray: ', this.senatorArray);
+ 
+    // static linechart with hard coded values 
+    // makes me happy to see it
     var chart1 = c3.generate({
       bindto: '#chart1',
       data: {
@@ -65,11 +36,13 @@ App.CongressRecordListView = Backbone.View.extend({
         ]
       }
     });
+
+    // dynamic chart
     var chart2 = c3.generate({
       bindto: '#chart2',
       data: {
         columns: [
-          [senatorArray, 30, 200, 100, 400, 150, 250],
+          [this.senatorArray, 30, 200, 100, 400, 150, 250],
         ]
       }
     });

@@ -20,7 +20,7 @@ App.CongressRecordModel = Backbone.Model.extend({
       this.bioguideid = params.bioguideid;
       console.log('congressRecordModel (#initialize) this.phrase: ', this.phrase);   
       console.log('congressRecordModel (#initialize) this.senator_name: ', this.senator_name);
-      console.log('congressModel (#initialize) this.bioguideid: ', this.bioguideid);
+      console.log('congressRecordModel (#initialize) this.bioguideid: ', this.bioguideid);
       console.log('congressRecordModel (#initialize) this:', this);
       // do fetch
       if (this.phrase){
