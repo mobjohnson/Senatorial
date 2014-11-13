@@ -13,6 +13,7 @@
   <div id='search-item-list'>
     <span class='add'>Add a Search Item</span>
   </div>
+  <div id='linechart'></div>
   <!-- Not used yet???  -->
  <!--  <div id='senator-list'>
     <span class='addsenator'>Senator span</span>
@@ -56,11 +57,11 @@
 
 <!-- Not used yet!!!!  -->
 
- <script type="text/x-handlebars-template" id="senator-template">
+<script type="text/x-handlebars-template" id="senator-template">
 
-    <span class='addsenator'>New Senator</span>
-  </div>
- </script>
+  <span class='addsenator'>New Senator</span>
+</div>
+</script>
 
 <!-- Template for adding new scongressRecords, but are not adding senators by a template -->
 
@@ -77,6 +78,12 @@
 
 </script>
 
+<script type="text/x-handlebars-template" id="linechart-template">
+
+    <span class='addsenator'>New Senator</span>
+  </div>
+ </script>
+
 <script>
   App = {
     Models: {},
@@ -89,19 +96,13 @@
   App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
 
   //   // Instantiate senator collection. Does not fetch yet
-
   App.TempData.senators = {};
 
-  //   // this is not calling a back-end
-
-  // App.TempData.senators = <%= @senators.to_json.html_safe %>;
   
-  //   // Instantiate congressRecords collection. Does not fetch yet
-
+  // Instantiate congressRecords collection. Does not fetch yet
   App.TempData.congressRecords = {};
 
-  //   // Instantiate congressRecord collection. Does not fetch yet
-  // App.TempData.congressRecords = <%= @congress_records.to_json.html_safe %>;
+
 </script>
 
 <%= javascript_include_tag "application" %>

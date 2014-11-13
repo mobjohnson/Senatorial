@@ -32,6 +32,7 @@
 //= require views/congressRecordListView
 //= require views/congressRecordView
 //= require views/formView
+//= require views/linechartView
 //= require routers/router
 
 $(document).ready(function(){

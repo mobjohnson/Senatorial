@@ -7,6 +7,7 @@ App.Router = Backbone.Router.extend({
     'search_items/:id/edit': 'editSearchItem',
     'senators/:state1/:state2/:phrase': 'runSearch',
     'congress_records/:bioguideid/:phrase': 'runRecord'
+    // 'linechart/': 'loadChart'
   },
 
   initialize: function(){
@@ -16,26 +17,23 @@ App.Router = Backbone.Router.extend({
     App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
-
-
     // Need to instantiate Models before Collections. Here or in application.html.erb
-    App.Models.senators = new App.SenatorModel(App.TempData)
+    App.Models.senators = new App.SenatorModel(App.TempData);
 
 
     // Instantiate senators collection. Does NOT fetch yet
     App.Collections.senators = new App.SenatorCollection(App.TempData.senators);
     // Instantiate senator collection view, pass collection to it
     App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
-
-
-    // Need to instantiate congressRecords before Collections
-
-
     // Instantiate congressRecords collection.
     // Does NOT fetch yet
     App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
     // Instantiate congressRecords collection view, pass collection to it
     App.Views.congressRecordListView = new App.CongressRecordListView({collection: App.Collections.congressRecords});
+
+    // Instantiate linechart view, pass collection to it????
+    // App.Views.linechartView = new App.LinechartView({collection: App.Collections.congressRecords});
+
   },
 
   index: function(){
@@ -87,5 +85,9 @@ App.Router = Backbone.Router.extend({
     var activeCongressRecord = new App.CongressRecordModel({phrase: phrase, bioguideid: bioguideid});
     console.log(activeCongressRecord);
   }
+
+  // loadChart: function(){
+    // no. this is not where you instantiate views, only models
+  // }
 
 });
