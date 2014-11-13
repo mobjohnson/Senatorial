@@ -11,7 +11,6 @@ App.SearchItemListView = Backbone.View.extend({
     console.log('New Search Item List View');
     this.listenTo(this.collection, 'add', this.addOne);
     this.listenTo(this.collection, 'reset', this.addAll);
-
     this.addAll();
   },
 

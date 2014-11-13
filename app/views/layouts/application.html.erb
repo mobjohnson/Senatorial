@@ -13,99 +13,91 @@
   <div id='search-item-list'>
     <span class='add'>Add a Search Item</span>
   </div>
-  <div id='linechart'></div>
-  <!-- Not used yet???  -->
- <!--  <div id='senator-list'>
-    <span class='addsenator'>Senator span</span>
-  </div> -->
-  <!-- where charts are added -->
+  <div id='senator-list'></div>
+    <span class='addsenator'>Add a Senator?</span>
+  <!-- Attempt to put in linechart -->
+  <!-- <div id='linechart'></div> -->
   <div id='congress-record-list'>
     <span class='add-congress-record'><h2>Congressional Records Chart</h2></span>
   </div>
 
-
-<script type="text/x-handlebars-template" id="search-item-template">
-  <div id={{id}}>
-    <h5>States: {{state1}} and {{state2}}, using search phrase: {{phrase}}</h5>
-<!--    // <h5>Senators: {{sr_senator}} and {{jr_senator}}</h5> -->
-    <span class='destroy'>Delete</span>
-    <span class='edit'>Edit</span>
-<!--    // not using data-state1 attribute below -->
-    <a class='runlink' href="#/senators/{{state1}}/{{state2}}/{{phrase}}">
-      <span class='run' data-state1="{{state1}}">Run Search</span>
-    </a>
-
-  </div>
-</script>
-
-<!-- Template for adding new searchItems -->
-<script type="text/x-handlebars-template" id='search-item-form-template'>
-  <div class='search-item-form-div'>
-    <input type="text" name="state1" value="first state" placeholder="{{state1}}">
-    <input type="text" name="state2" value="second state" placeholder="{{state2}}">
-    <input type="text" name="phrase" value="phrase" placeholder="{{phrase}}">
-    {{#if this}}
-    <span class='edit-search-item'>Edit Search Item</span>
-    {{else}}
-    <span class='new-search-item'>New Search Item</span>
-    {{/if}}
-    <span class='cancel'>Cancel</span>
-  </div>
-</script>
-
-<!-- Template for adding new senators, but are not adding senators by a template -->
-
-<!-- Not used yet!!!!  -->
-
-<script type="text/x-handlebars-template" id="senator-template">
-
-  <span class='addsenator'>New Senator</span>
-</div>
-</script>
-
-<!-- Template for adding new scongressRecords, but are not adding senators by a template -->
-
-<script type="text/x-handlebars-template" id="congress-record-template">
-  <div id={{id}}>
-    <div id="chart1{{id}}">New congressRecords chart</div>
-    <div id="chart2{{id}}">New congressRecords chart</div>
-    <span class='add-congress-record'>new congress record</span>
-
+  <!-- Template for showing search items along with Delete, Edit and Run Search -->
+  <script type="text/x-handlebars-template" id="search-item-template">
     <div id={{id}}>
-    <h5>senator_name: {{senator_name}} with bioguideid: {{bioguideid}}, having recordCounts: {{recordCounts}}</h5>
+      <h5>States: {{state1}} and {{state2}}, using search phrase: {{phrase}}</h5>
+      <span class='destroy'>Delete</span>
+      <span class='edit'>Edit</span>
+  <!--    // not using data-state1 attribute below -->
+      <a class='runlink' href="#/senators/{{state1}}/{{state2}}/{{phrase}}">
+        <span class='run' data-state1="{{state1}}">Run Search</span>
+      </a>
     </div>
-  </div>
+  </script>
 
-</script>
+  <!-- Template for form for adding new searchItems -->
+  <script type="text/x-handlebars-template" id='search-item-form-template'>
+    <div class='search-item-form-div'>
+      <input type="text" name="state1" value="first state" placeholder="{{state1}}">
+      <input type="text" name="state2" value="second state" placeholder="{{state2}}">
+      <input type="text" name="phrase" value="phrase" placeholder="{{phrase}}">
+      {{#if this}}
+      <span class='edit-search-item'>Edit Search Item</span>
+      {{else}}
+      <span class='new-search-item'>New Search Item</span>
+      {{/if}}
+      <span class='cancel'>Cancel</span>
+    </div>
+  </script>
 
-<script type="text/x-handlebars-template" id="linechart-template">
+  <!-- Template for showing new senators, but are not displaying senators by a template -->
+  <script type="text/x-handlebars-template" id="senator-template">
+    <div id={{id}}>
+      // <span class='addsenator'>New Senator<span>
+      <h5>Senior senator: {{sr_senator}} and Junior Senator{{state2}}</h5>
+    </div>
+  </script>
 
-    <span class='addsenator'>New Senator</span>
-  </div>
- </script>
+  <!-- Template for adding new congressRecords, but are not adding senators by a template -->
+  <script type="text/x-handlebars-template" id="congress-record-template">
+    <div id={{id}}>
+      <div id="chart1{{id}}">New congressRecords chart</div>
+      <div id="chart2{{id}}">New congressRecords chart</div>
+      <span class='add-congress-record'New congress record</span>
+      <div id={{id}}>
+      <h5>senator_name: {{senator_name}} with bioguideid: {{bioguideid}}, having recordCounts: {{recordCounts}}</h5>
+      </div>
+    </div>
 
-<script>
-  App = {
-    Models: {},
-    Views: {},
-    Collections: {},
-    TempData: {}
-  };
+  </script>
 
-  // Instantiate searchItems collection. Does not fetch yet
-  App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
+  <script type="text/x-handlebars-template" id="linechart-template">
 
-  //   // Instantiate senator collection. Does not fetch yet
-  App.TempData.senators = {};
+      <span class='addsenator'>New linechart</span>
+    </div>
+   </script>
 
-  
-  // Instantiate congressRecords collection. Does not fetch yet
-  App.TempData.congressRecords = {};
+  <script>
+    App = {
+      Models: {},
+      Views: {},
+      Collections: {},
+      TempData: {}
+    };
+
+    // Instantiate searchItems collection. Does not fetch yet
+    App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
+
+    //   // Instantiate senator collection. Does not fetch yet
+    App.TempData.senators = {};
+
+    
+    // Instantiate congressRecords collection. Does not fetch yet
+    App.TempData.congressRecords = {};
 
 
-</script>
+  </script>
 
-<%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
 
 </body>
 </html>
