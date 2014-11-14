@@ -29,10 +29,11 @@
 //= require views/searchItemView
 //= require views/senatorListView
 //= require views/senatorView
+//= require views/linechartView
 //= require views/congressRecordListView
 //= require views/congressRecordView
 //= require views/formView
-//= require views/linechartView
+
 //= require routers/router
 
 $(document).ready(function(){
@@ -40,9 +41,5 @@ $(document).ready(function(){
   Backbone.history.start();
 });
 
-// no using, so removed the '=' sign:
-// require models/search_item
-// require views/list_view
-// require views/search_item_profile_view
 
 
