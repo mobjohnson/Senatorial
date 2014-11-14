@@ -27,7 +27,7 @@
       <h5>States: {{state1}} and {{state2}}, using search phrase: {{phrase}}</h5>
       <span class='destroy'>Delete</span>
       <span class='edit'>Edit</span>
-  <!--    // not using data-state1 attribute below -->
+  // <!--   not using data-state1 attribute below -->
       <a class='runlink' href="#/senators/{{state1}}/{{state2}}/{{phrase}}">
         <span class='run' data-state1="{{state1}}">Run Search</span>
       </a>
@@ -52,8 +52,7 @@
   <!-- Template for showing new senators, but are not displaying senators by a template -->
   <script type="text/x-handlebars-template" id="senator-template">
     <div id={{id}}>
-      // <span class='addsenator'>New Senator<span>
-      <h5>Senior senator: {{sr_senator}} and Junior Senator{{state2}}</h5>
+      <h5>Senior senator: {{sr_senator}} and Junior Senator: {{jr_senator}}</h5>
     </div>
   </script>
 
@@ -87,7 +86,7 @@
     // Instantiate searchItems collection. Does not fetch yet
     App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
 
-    //   // Instantiate senator collection. Does not fetch yet
+    // Instantiate senator collection. Does not fetch yet
     App.TempData.senators = {};
 
     

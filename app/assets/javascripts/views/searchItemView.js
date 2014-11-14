@@ -24,7 +24,7 @@ var SearchItemView = Backbone.View.extend({
   },
 
   onEdit: function(){
-    App.router.navigate('set_items/' + this.model.id + '/edit', { trigger: true});
+    App.router.navigate('search_items/' + this.model.id + '/edit', { trigger: true});
   },
 
   onDestroy: function(){
