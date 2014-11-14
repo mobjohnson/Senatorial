@@ -13,8 +13,9 @@
   <div id='search-item-list'>
     <span class='add'>Add a Search Item</span>
   </div>
-  <div id='senator-list'></div>
-    <span class='addsenator'>Add a Senator?</span>
+  <div id='senator-list'>
+    <span class='add-senator'>Add a Senator?</span>
+  </div>
   <!-- Attempt to put in linechart -->
   <!-- <div id='linechart'></div> -->
   <div id='congress-record-list'>
@@ -52,7 +53,7 @@
   <!-- Template for adding new senators -->
   <script type="text/x-handlebars-template" id="senator-template">
     <div id={{id}}>
-      <span class='add-senator-record'>New congress record</span>
+      <span class='add-senator'>New congress record</span>
       <h5>Senior Senator: {{sr_senator}} and Junior Senator: {{jr_senator}}</h5>
     </div>
   </script>
@@ -60,21 +61,27 @@
   <!-- Template for showing new congressRecords -->
   <script type="text/x-handlebars-template" id="congress-record-template">
     <div id={{id}}>
+
       <div id="chart1{{id}}">New congressRecords chart</div>
       <div id="chart2{{id}}">New congressRecords chart</div>
+
       <span class='add-congress-record'>New congress record</span>
       <h5>senator_name: {{senator_name}} with bioguideid: {{bioguideid}}, having recordCounts: {{recordCounts}}</h5>
     </div>
-
   </script>
 
+  <!-- Template for showing new linechart -->
   <script type="text/x-handlebars-template" id="linechart-template">
+    <div id={{id}}>
 
-      <span class='addsenator'>New linechart</span>
+      <span class='addlinechart'>New linechart</span>
     </div>
    </script>
 
   <script>
+
+    LineChartVar = '';
+
     App = {
       Models: {},
       Views: {},
@@ -92,6 +99,8 @@
     // Instantiate congressRecords collection. Does not fetch yet
     App.TempData.congressRecords = {};
 
+    // Instantiate linechart collection. Does not set yet
+    App.TempData.linechart = {};
 
   </script>
 

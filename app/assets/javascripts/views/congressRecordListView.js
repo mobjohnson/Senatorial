@@ -7,23 +7,22 @@ App.CongressRecordListView = Backbone.View.extend({
     console.log('New Congress Record View');
     this.listenTo(this.collection, 'add', this.addOne);
     this.listenTo(this.collection, 'reset', this.addAll);
-    console.log('line 10 congressRecordListView#initialize this: ', this);
+    console.log('congressRecordListView#initialize this: ', this);
     this.addAll();
   },
 
   addOne: function(congressRecord, el){
-    console.log(' --- inside congressRecordListView#addOne this:', this);
+    console.log('inside congressRecordListView#addOne this:', this);
     var congressRecordView = new CongressRecordView({ model: congressRecord});
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));
     var models = this.collection.models;
-    // console.log(' --- models in congressRecordListView', models)
+
     this.senatorArray = [];
  
     // Add senator name to array
     this.senatorArray.push(this.collection.models[0].attributes.senator_name);
     // Add data to array
 
-    // console.log('*** senatorArray: ', this.senatorArray);
  
     // static linechart with hard coded values 
     // makes me happy to see it
