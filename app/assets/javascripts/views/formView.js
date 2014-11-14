@@ -18,9 +18,9 @@ App.SearchItemFormView = Backbone.View.extend({
   },
 
   render: function(){
-    if (this.model === undefined) {
-    } else {
+    if (this.model) {
       this.$el.html(this.template(this.model.toJSON()));
+    } else {
       this.$el.html(this.template());
     }
   },
@@ -41,7 +41,7 @@ App.SearchItemFormView = Backbone.View.extend({
     this.collection.create(data, {
       success: function(){
         $('input').val('');
-        $('#grumble-form').hide(100);
+        $('#search-item-form').hide(100);
         App.router.navigate('')
       }
     });
