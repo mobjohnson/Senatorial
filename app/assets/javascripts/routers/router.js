@@ -6,8 +6,8 @@ App.Router = Backbone.Router.extend({
     'search_items/new': 'newSearchItem',
     'search_items/:id/edit': 'editSearchItem',
     'senators/:state1/:state2/:phrase': 'runSearch',
-    'congress_records/:bioguideid/:phrase': 'runRecord'
-    // 'linechart/': 'loadChart'  ???
+    'congress_records/:bioguideid/:phrase': 'runRecord',
+    'congress_records/:senator_name/recordCounts': 'loadChart'
   },
 
   initialize: function(){
@@ -28,8 +28,9 @@ App.Router = Backbone.Router.extend({
     App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
     // Instantiate congressRecords collection view, pass collection to it
     App.Views.congressRecordListView = new App.CongressRecordListView({collection: App.Collections.congressRecords});
-    
+
     // Instantiate linechart view, pass collection to it
+
     // App.Views.linechartView = new App.LinechartView({collection: App.Collections.congressRecords});
   },
 
@@ -81,10 +82,23 @@ App.Router = Backbone.Router.extend({
     console.log('in runRecord',phrase, bioguideid);
     var activeCongressRecord = new App.CongressRecordModel({phrase: phrase, bioguideid: bioguideid});
     console.log(activeCongressRecord);
-  }
+  },
 
-  // loadChart: function(){
-    // no. this is not where you instantiate views, only models
-  // }
+  loadChart: function(senator_name, recordCounts){
+    console.log('in loadChart', senator_name, recordCounts);
+ 
+    // Find the specific congressRecord to reference
+    var congressRecord = App.Collections.congressRecords.get(congressRecordId);
+
+    // Set the model property on form view
+    App.Views.lineChartView.model = congressRecord;
+
+    // Re-render the lineChart view
+    App.Views.lineChart.render();
+
+    // Show lineChart
+    $('#linechart').show();
+
+  }
 
 });
