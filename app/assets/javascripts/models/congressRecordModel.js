@@ -26,7 +26,7 @@ App.CongressRecordModel = Backbone.Model.extend({
       if (this.phrase){
         this.fetch({
           success: function(data){
-          console.log('Beginning of initialize method');
+          console.log('Beginning of congressRecordModel fetch');
           console.log('congressRecordModel (#initialize/this.fetch/#success data:', data);
           console.log('congressRecordModel (#initialize/this.fetch/#success this:', this);
           // set recordCounts to array of Congress Records matching criteria

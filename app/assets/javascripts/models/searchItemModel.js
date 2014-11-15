@@ -9,17 +9,17 @@ App.SearchItemModel = Backbone.Model.extend({
     // create new senatorModel and adding attributes to this model for state1Senator
     // if (this.state1 === undefined){
       // } else {      
-      this.state1Senator = new App.SenatorModel({phrase: params.phrase, state: params.state1});
-      // App.Collections.senators.add(this.state1Senator);
+      this.state1Senator = new App.SenatorModel({phrase: this.phrase, state: this.state1});
+      // App.SenatorCollection.add(this.state1Senator);
     // }
 
 
-    
+
     // creating new senatorModel and adding attributes to this model for state1Senator
     // if (this.state2 === undefined){
       // } else {      
-      this.state2Senator = new App.SenatorModel({phrase: params.phrase, state: params.state2});      
-      // App.Collections.senators.add(this.state2Senator); 
+      this.state2Senator = new App.SenatorModel({phrase: this.phrase, state: this.state2});      
+      // this.collection.add(this.state2Senator); 
     // }
 
 

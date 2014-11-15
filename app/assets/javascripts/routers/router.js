@@ -24,9 +24,6 @@ App.Router = Backbone.Router.extend({
     App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
-    // Need to instantiate Models before Collections. Here or in application.html.erb
-      // App.Models.senators = new App.SenatorModel(App.TempData);
-
 
     // Instantiate senator collection view, pass collection to it
     App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
@@ -81,15 +78,25 @@ App.Router = Backbone.Router.extend({
     
   runSearch: function(state1, state2, phrase){
     console.log('in runSearch', state1, state2, phrase);
-    var activeSearch = new App.SearchItemModel({state1: state1, state2: state2, phrase: phrase});
-    console.log(activeSearch);
- 
+    this.state1 = state1;
+    this.state2 = state2;
+    if (this.state1 === undefined){
+    } else {
+      if (this.state2 === undefined){
+        var activeSearch = new App.SearchItemModel({state1: this.state1, state2: this.state2, phrase: phrase});
+        console.log(activeSearch);
+      } 
+    }
   },
 
   runRecord: function(phrase, bioguideid){
     console.log('in runRecord',phrase, bioguideid);
-    var activeCongressRecord = new App.CongressRecordModel({phrase: phrase, bioguideid: bioguideid});
-    console.log(activeCongressRecord);
+    this.phrase = phrase;
+    if (this.phrase === undefined){
+    } else {
+      var activeCongressRecord = new App.CongressRecordModel({phrase: this.phrase, bioguideid: bioguideid});
+      console.log(activeCongressRecord);
+    }
   },
 
   loadChart: function(senator_name, recordCounts){

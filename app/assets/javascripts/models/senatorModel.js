@@ -68,7 +68,7 @@ App.SenatorModel = Backbone.Model.extend({
 
         });
       }
-      
+    // this.collection.add(this);  
     }     
   },
 });

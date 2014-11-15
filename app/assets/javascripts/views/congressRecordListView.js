@@ -11,7 +11,7 @@ App.CongressRecordListView = Backbone.View.extend({
     this.addAll();
   },
 
-  addOne: function(congressRecord, el){
+  addOne: function(congressRecord){ // removed el
     console.log('inside congressRecordListView#addOne this:', this);
     var congressRecordView = new CongressRecordView({ model: congressRecord});
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));

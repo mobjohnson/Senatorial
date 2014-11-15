@@ -11,10 +11,11 @@ App.SenatorListView = Backbone.View.extend({
     this.addAll();
   },
 
-  addOne: function(senator, el){
+  addOne: function(senator){ // removed el
      console.log('inside senatorListView#addOne this:', this);
     var senatorView = new SenatorView({ model: senator});
     senatorView.$el.insertAfter(this.$('span.add-senator'));
+    // this.collection.add(senator); // added
   },
 
   addAll: function(){
