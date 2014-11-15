@@ -9,6 +9,16 @@ App.SenatorListView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.addAll); 
     console.log('congressRecordListView#initialize this: ', this);   
     this.addAll();
+
+                this.collection.create(this.Record1, { success: function(){
+                console.log('+++ collection Record1 appended');
+              }
+            });
+
+            this.collection.create(this.Record2, { success: function(){
+                console.log('+++ collection Record2 appended');
+              }
+            });
   },
 
   addOne: function(senator){ // removed el
