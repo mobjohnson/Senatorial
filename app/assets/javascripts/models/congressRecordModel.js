@@ -5,12 +5,12 @@ App.CongressRecordModel = Backbone.Model.extend({
   },
 
   // Defaults for name and bioguideid for Capital Words API, and placeholder for array return
-  defaults:{
-    phrase: '',
-    senator_name: '',
-    bioguideid: '',
-    recordCounts: [] 
-  },
+  // defaults:{
+  //   phrase: '',
+  //   senator_name: '',
+  //   bioguideid: '',
+  //   recordCounts: [] 
+  // },
 
   initialize: function(params){
     if (params.phrase === undefined){

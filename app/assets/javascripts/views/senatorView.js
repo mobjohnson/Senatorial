@@ -11,10 +11,12 @@ var SenatorView = Backbone.View.extend({
     this.template = Handlebars.compile(source);
 
     this.render();
+
   },
 
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
+    return this; // Added per Backbone docs?    
   }
 
 });

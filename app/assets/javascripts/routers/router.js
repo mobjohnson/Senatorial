@@ -12,29 +12,34 @@ App.Router = Backbone.Router.extend({
 
   initialize: function(){
     // Instantiate searchItems collection. Does NOT fetch yet
-    App.Collections.searchItems = new App.SearchItemCollection(App.TempData.searchItems);    
+    App.Collections.searchItems = new App.SearchItemCollection(App.TempData.searchItems);
+    // Instantiate senators collection. Does NOT fetch yet
+    App.Collections.senators = new App.SenatorCollection({});
+    // Instantiate congressRecords collection.
+    // Does NOT fetch yet
+    App.Collections.congressRecords = new App.CongressRecordCollection({});
+
+
     // Instantiate searchItem collection view, pass collection to it
     App.Views.searchItemListView = new App.SearchItemListView({collection: App.Collections.searchItems});
     // Instantiate searchItem form view, pass collection to it
     App.Views.searchItemFormView = new App.SearchItemFormView({collection: App.Collections.searchItems});
     // Need to instantiate Models before Collections. Here or in application.html.erb
-    App.Models.senators = new App.SenatorModel(App.TempData);
-    // Instantiate senators collection. Does NOT fetch yet
-    App.Collections.senators = new App.SenatorCollection(App.TempData.senators);
+      // App.Models.senators = new App.SenatorModel(App.TempData);
+
+
     // Instantiate senator collection view, pass collection to it
     App.Views.senatorListView = new App.SenatorListView({collection: App.Collections.senators});
-    // Instantiate congressRecords collection.
-    // Does NOT fetch yet
-    App.Collections.congressRecords = new App.CongressRecordCollection(App.TempData.congressRecords);
+
     // Instantiate congressRecords collection view, pass collection to it
     App.Views.congressRecordListView = new App.CongressRecordListView({collection: App.Collections.congressRecords});
 
-    // Set up a global variable to save info for linechart
+    // Set up a large scope variable to save info for linechart
     App.LineChart = 'test';
 
     // Instantiate linechart view, pass collection to it
 
-    // App.Views.linechartView = new App.LinechartView({collection: App.Collections.congressRecords});
+      // App.Views.linechartView = new App.LinechartView({collection: App.Collections.congressRecords});
   },
 
   index: function(){
