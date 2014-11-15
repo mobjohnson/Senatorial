@@ -9,6 +9,17 @@ App.CongressRecordListView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.addAll);
     console.log('congressRecordListView#initialize this: ', this);
     this.addAll();
+
+    // Add congressRecord model to congressRecordCollection
+
+    // this.collection.create(this, { 
+    //   success: function(){
+    //     console.log('collection congressRecord appended');
+    //   }
+    // });
+
+    this.collection.create(this);
+
   },
 
   addOne: function(congressRecord){ // removed el
@@ -19,22 +30,7 @@ App.CongressRecordListView = Backbone.View.extend({
 
     this.senatorArray = [];
  
-    // Add senator name to array
-    this.senatorArray.push(this.collection.models[0].attributes.senator_name);
-    // Add data to array
-
- 
-    // static linechart with hard coded values 
-    // makes me happy to see it
-    var chart1 = c3.generate({
-      bindto: '#chart1',
-      data: {
-        columns: [
-          ['data1', 30, 200, 100, 400, 150, 250],
-          ['data2', 50, 20, 10, 40, 15, 25]
-        ]
-      }
-    });
+    console.log('break congressRecordListView line 30');
 
     // dynamic chart
     var chart2 = c3.generate({

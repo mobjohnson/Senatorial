@@ -11,18 +11,23 @@ App.SenatorListView = Backbone.View.extend({
     this.addAll();
 
     // Add Record1 model to senatorCollection
-    this.collection.create(this.Record1, { 
-      success: function(){
-        console.log('collection Record1 appended');
-      }
-    });
+
+    // this.collection.create(this.Record1, { 
+    //   success: function(){
+    //     console.log('collection Record1 appended');
+    //   }
+    // });
+ 
+    this.collection.add(this);
 
     // Add Record2 model to senatorCollection
-    this.collection.create(this.Record2, { 
-      success: function(){
-        console.log('collection Record2 appended');
-      }
-    });
+
+    // this.collection.create(this.Record2, { 
+    //   success: function(){
+    //     console.log('collection Record2 appended');
+    //   }
+    // });
+
   },
 
   addOne: function(senator){ // removed el
