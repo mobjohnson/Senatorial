@@ -10,12 +10,14 @@ App.SenatorListView = Backbone.View.extend({
     console.log('congressRecordListView#initialize this: ', this);   
     this.addAll();
 
+    // Add Record1 model to senatorCollection
     this.collection.create(this.Record1, { 
       success: function(){
         console.log('collection Record1 appended');
       }
     });
 
+    // Add Record2 model to senatorCollection
     this.collection.create(this.Record2, { 
       success: function(){
         console.log('collection Record2 appended');
