@@ -80,14 +80,15 @@
       Models: {},
       Views: {},
       Collections: {},
-      TempData: {}
+      TempData: {},
+      LineChart: {}
     };
 
     // Instantiate searchItems collection. Does not fetch yet
     App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
 
-    // // Instantiate senator collection. Does not fetch yet
-    // App.TempData.senators = {};
+    // Instantiate LineChart. 
+    App.LineChart = [];
 
     
     // // Instantiate congressRecords collection. Does not fetch yet

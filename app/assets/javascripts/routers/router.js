@@ -32,7 +32,7 @@ App.Router = Backbone.Router.extend({
     App.Views.congressRecordListView = new App.CongressRecordListView({collection: App.Collections.congressRecords});
 
     // Set up a large scope variable to save info for linechart
-    App.LineChart = 'test';
+    // App.LineChart = 'test';
 
     // Instantiate linechart view, pass collection to it
 
