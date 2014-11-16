@@ -17,14 +17,11 @@ App.CongressRecordListView = Backbone.View.extend({
     //     console.log('collection congressRecord appended');
     //   }
     // });
-
-    // this.test = this.collection // added
-    // if (this.test === undefined) {
-    //   } else {
-    //   this.collection.create(this);
-    // }
-
-
+    this.test = this.collection // added
+    if (this.test === undefined) {
+      } else {
+      this.collection.create(this);
+    }
   },
 
   addOne: function(congressRecord){ // removed el

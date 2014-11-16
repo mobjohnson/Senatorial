@@ -37,32 +37,31 @@ App.CongressRecordModel = Backbone.Model.extend({
 
           // store array of numbers from recordCounts into numArray
           this.numArray = [];  
-          console.log('++++ congressRecordModel numArray:', this.numArray);           
+         
           // push recordCount numbers into numArray
           for (var i = 0; i < this.recordCounts.length; i++) {
             this.numArray.push(this.recordCounts[i].count);
           };
-
+          console.log('++++ congressRecordModel numArray:', this.numArray);  
           // need to move to outer scope for this.senator_name
 
-          // Add recordCounts to LineChart
-          console.log('congressRecordModel App.LineChart', App.LineChart);
+        // Add recordCounts to LineChart
+        // console.log('congressRecordModel App.LineChart', App.LineChart);
 
-          // Add numArray to LineChart
-          for (var i = 0; i < App.LineChart.length; i++) {
-            if (App.LineChart[i].contains(this.senator_name)) {
-              App.LineChart[i].push(this.numArray);
-            };
- 
-          };
-          
-          console.log('//// congressRecordModel LineChart:', App.LineChart);
+        // Add numArray to LineChart
+        for (var i = 0; i < App.LineChart.length; i++) {
+          if (App.LineChart[i][0] === data.senator_name) {
+            App.LineChart[i] = App.LineChart[i].concat(this.numArray);
+          }; 
+        };
+        
+        console.log('//// congressRecordModel LineChart:', App.LineChart);
 
           }
         });
       }
-                                  
-      console.log('post fetch congressRecordModel (#initialize) this:', this);
+                              
+    console.log('post fetch congressRecordModel (#initialize) this:', this);
     }  
   }
 
