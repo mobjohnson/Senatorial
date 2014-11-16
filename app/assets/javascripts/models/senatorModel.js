@@ -71,10 +71,10 @@ App.SenatorModel = Backbone.Model.extend({
 
               // Add sr_senator to Linechart
               App.LineChart.push([this.sr_senator]);
-              console.log('--senatorModel LineChart:', App.LineChart)
+              console.log('senatorModel LineChart:', App.LineChart)
               // Add jr_senator to Linechart
               App.LineChart.push([this.jr_senator]);
-               console.log('--senatorModel LineChart:', App.LineChart)
+               console.log('senatorModel LineChart:', App.LineChart)
             },
 
           });

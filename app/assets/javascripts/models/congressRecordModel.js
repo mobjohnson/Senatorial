@@ -29,9 +29,35 @@ App.CongressRecordModel = Backbone.Model.extend({
           console.log('Beginning of congressRecordModel fetch');
           console.log('congressRecordModel (#initialize/this.fetch/#success data:', data);
           console.log('congressRecordModel (#initialize/this.fetch/#success this:', this);
-          // set recordCounts to array of Congress Records matching criteria
-          this.recordCounts = data.attributes.results
+
+          // set recordCounts to array of Congress Records matching criteria.
+          // recordCounts includes both nubers of records and month.
+          this.recordCounts = data.attributes.results;
           console.log('congressRecordModel (initialize/this.fetch/#success data.attributes.results: ', this.recordCounts);
+
+          // store array of numbers from recordCounts into numArray
+          this.numArray = [];  
+          console.log('++++ congressRecordModel numArray:', this.numArray);           
+          // push recordCount numbers into numArray
+          for (var i = 0; i < this.recordCounts.length; i++) {
+            this.numArray.push(this.recordCounts[i].count);
+          };
+
+          // need to move to outer scope for this.senator_name
+
+          // Add recordCounts to LineChart
+          console.log('congressRecordModel App.LineChart', App.LineChart);
+
+          // Add numArray to LineChart
+          for (var i = 0; i < App.LineChart.length; i++) {
+            if (App.LineChart[i].contains(this.senator_name)) {
+              App.LineChart[i].push(this.numArray);
+            };
+ 
+          };
+          
+          console.log('//// congressRecordModel LineChart:', App.LineChart);
+
           }
         });
       }

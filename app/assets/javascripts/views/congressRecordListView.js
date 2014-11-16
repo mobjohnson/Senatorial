@@ -18,7 +18,12 @@ App.CongressRecordListView = Backbone.View.extend({
     //   }
     // });
 
-    this.collection.create(this);
+    // this.test = this.collection // added
+    // if (this.test === undefined) {
+    //   } else {
+    //   this.collection.create(this);
+    // }
+
 
   },
 
