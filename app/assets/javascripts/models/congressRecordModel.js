@@ -42,7 +42,7 @@ App.CongressRecordModel = Backbone.Model.extend({
           for (var i = 0; i < this.recordCounts.length; i++) {
             this.numArray.push(this.recordCounts[i].count);
           };
-          console.log('++++ congressRecordModel numArray:', this.numArray);  
+          console.log('congressRecordModel numArray:', this.numArray);  
           // need to move to outer scope for this.senator_name
 
         // Add recordCounts to LineChart
@@ -55,7 +55,7 @@ App.CongressRecordModel = Backbone.Model.extend({
           }; 
         };
         
-        console.log('//// congressRecordModel LineChart:', App.LineChart);
+        console.log('congressRecordModel LineChart:', App.LineChart);
 
           }
         });
