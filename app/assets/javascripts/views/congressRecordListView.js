@@ -34,16 +34,6 @@ App.CongressRecordListView = Backbone.View.extend({
  
     console.log('break congressRecordListView line 30');
 
-    // dynamic chart
-    var chart2 = c3.generate({
-      bindto: '#chart2',
-      data: {
-        columns: [
-          [this.senatorArray, 30, 200, 100, 400, 150, 250],
-        ]
-      }
-    });
-
   },
 
   addAll: function(){
