@@ -10,7 +10,7 @@ App.SearchItemModel = Backbone.Model.extend({
     // create new senatorModel and adding attributes to this model for state1Senator
     // if (this.state1 === undefined){
       // } else {      
-      this.state1Senator = new App.SenatorModel({phrase: this.phrase, state: this.state1, parentobject: this});
+      this.state1Senator = new App.SenatorModel({phrase: this.phrase, state: this.state1, parentObject: this});
       // App.SenatorCollection.add(this.state1Senator);
     // }
 
@@ -19,7 +19,7 @@ App.SearchItemModel = Backbone.Model.extend({
     // creating new senatorModel and adding attributes to this model for state1Senator
     // if (this.state2 === undefined){
       // } else {      
-      this.state2Senator = new App.SenatorModel({phrase: this.phrase, state: this.state2, parentobject: this});      
+      this.state2Senator = new App.SenatorModel({phrase: this.phrase, state: this.state2, parentObject: this});      
       // this.collection.add(this.state2Senator); 
     // }
 
