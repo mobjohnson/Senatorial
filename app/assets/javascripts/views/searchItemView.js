@@ -11,15 +11,39 @@ var SearchItemView = Backbone.View.extend({
 
   initialize: function(){
     console.log('New Search Item View');
-    this.listenTo(this.model, 'change', this.render);
+
+    this.listenTo(this.model, 'change', this.render();
+
+    // listen for a change to collection of congressrecords associated with this searchItem model 
+    this.listenTo(this.model.congressrecords, 'change', this.render);
+    // this.listenTo(this.model.congressrecords, 'change', this.changeCr);
 
     var source = $('#search-item-template').html();
     this.template = Handlebars.compile(source);
 
     this.render();
   },
+  // Temporary test on initialize
+  // changeCr: function(){
+  //   console.log('this.model.congressrecords', this.model.congressrecords);
+  // },
 
   render: function(){
+    // dynamic chart
+    // have a counter to check that all four congressRecords are there 
+
+    // render one chart for each searchItem
+    var chart2 = c3.generate({
+      bindto: '#chart2',
+      data: {
+        columns: [
+          // App.LineChart type thing
+        ]
+      }
+    });
+
+
+
     this.$el.html(this.template(this.model.toJSON()));
   },
 
