@@ -37,16 +37,46 @@ var SearchItemView = Backbone.View.extend({
     console.log(' +++ this in render:', this);
     console.log(' +++ recordCollection in render:', recordCollection);
 
+    // var chartValue = [];
+    var chartValues = [];
+    for (var i = 1; i < recordCollection.models.length; i++) {
+
+      console.log("!!!!-!!!! --- > recordCollection: ", recordCollection.models)
+
+      var chartValue = [];
+      console.log('--- recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
+
+      // Add the senator name to chartValue array
+      chartValue.push(recordCollection.models[i].attributes.senator_name);
+
+      if (recordCollection.models[i].attributes.results != undefined){
+        console.log('--- recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
+
+        var results = recordCollection.models[i].attributes.results
+
+
+        // console.log('--- recordCollection.models[i].attributes.results.length', recordCollection.models[i].attributes.results.length);
+
+        // var arrayLength = recordCollection.models[i].attributes.results.length
+
+        // // Add the six record counts to chartValus Array
+        for (var j = 0; j < results.length; j++) {
+          chartValue.push(results[j].count);
+        };
+        // Add this chartValue to chartValues array
+        chartValues.push(chartValue);
+        console.log('+++++ chartValues: ', chartValues);
+
+      };
+    };
+
+
     var chart2 = c3.generate({
       bindto: '#chart2',
       data: {
-        columns: [
-          // App.LineChart type thingy
-        ]
+        columns: chartValues
       }
     });
-
-
 
     this.$el.html(this.template(this.model.toJSON()));
   },
