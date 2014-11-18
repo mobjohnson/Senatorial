@@ -19,20 +19,24 @@ var SearchItemView = Backbone.View.extend({
     var source = $('#search-item-template').html();
     this.template = Handlebars.compile(source);
 
-    this.render();
+    this.render(this.model.congressrecords);
   },
 
   // function runs if the collection of CongressRecords in this searchItem changes
   changeCongressRecord: function(){
     console.log('this.model.congressrecords', this.model.congressrecords);
-    this.render();
+    this.render(this.model.congressrecords);
   },
 
-  render: function(){
+  render: function(recordCollection){
     // dynamic chart
     // have a counter to check that all four congressRecords are there 
 
     // render one chart for each searchItem
+
+    console.log(' +++ this in render:', this);
+    console.log(' +++ recordCollection in render:', recordCollection);
+
     var chart2 = c3.generate({
       bindto: '#chart2',
       data: {
