@@ -15,11 +15,16 @@ App.SenatorModel = Backbone.Model.extend({
   // },
 
   initialize: function(params){
+    var self = this;
     this.params = params // added
     if (this.params === undefined) {
       } else {
-      this.phrase = params.phrase // added
-      this.state = params.state // added
+      this.phrase = params.phrase; // added
+      this.state = params.state; // added
+      this.parentObject = params.parentObject;
+
+      console.log('params.parent', params.parentobject);
+      console.log('this.parent', this.parentObject);
 
       if (this.phrase === undefined) {
       } else {
@@ -66,15 +71,17 @@ App.SenatorModel = Backbone.Model.extend({
               console.log('senatorModel (data.changed.objects[1].person.bioguideid) this.jr_member_ref: ', this.jr_member_ref);  
               // creating new congressRecordModel and adding sttributes to this model for sr_senator
               this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.sr_senator, bioguideid: this.sr_member_ref});
+              self.parentObject.congressrecords.add(this.Record1);
               // creating new congressRecordModel and adding sttributes to this model for jr_senator
               this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
+              self.parentObject.congressrecords.add(this.Record2);
 
               // Add sr_senator to Linechart
               App.LineChart.push([this.sr_senator]);
-              console.log('senatorModel LineChart:', App.LineChart)
+              console.log('<<<<senatorModel LineChart:', App.LineChart)
               // Add jr_senator to Linechart
               App.LineChart.push([this.jr_senator]);
-               console.log('senatorModel LineChart:', App.LineChart)
+              console.log('>>>>senatorModel LineChart:', App.LineChart);
             },
 
           });
