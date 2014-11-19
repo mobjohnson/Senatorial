@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <h2>Senatorial</hw>
+    <h1>Senatorial</h1>
   </header>
   <div id='search-item-form'></div>
   <div id='search-item-list'>
@@ -17,7 +17,7 @@
     <span class='add-senator'></span>
   </div>
   <div id='congress-record-list'>
-    <span class='add-congress-record'><h2>Congressional Records Chart</h2></span>
+    <span class='add-congress-record'><h2>Congressional Records Chart</h2><h4>Showing use of phrase by senators during prior months</h4></span>
   </div>
 
   <!-- Template for showing search items along with Delete, Edit and Run Search -->
@@ -56,37 +56,32 @@
   <script type="text/x-handlebars-template" id="congress-record-template">
     <div id={{id}}>
 
-      <div id="chart2{{id}}">New congressRecords chart</div>
+      <div id="chart2{{id}}"></div>
 
-      <span class='add-congress-record'>New congress record</span>
-      <h5>Senator name: {{senator_name}} with phrase: {{phrase}}, having result: {{results}}</h5>
+      <span class='add-congress-record'></span>
+     
     </div>
   </script>
 
-  <!-- Template for showing new linechart -->
-  <script type="text/x-handlebars-template" id="linechart-template">
-    <div id={{id}}>
-
-      <span class='addlinechart'>New linechart</span>
-    </div>
-   </script>
-
   <script>
 
+    // Variable being abandoned
     LineChartVar = '';
 
+    // This starts everything!!!
     App = {
       Models: {},
       Views: {},
       Collections: {},
       TempData: {},
+      // Being abandoned
       LineChart: {}
     };
 
     // Instantiate searchItems collection. Does not fetch yet
     App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
 
-    // Instantiate LineChart. 
+    // Instantiate LineChart - being abandoned 
     App.LineChart = [];
 
     
