@@ -38,14 +38,18 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
- gem 'rails_12factor'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 
- ruby '2.1.2'
+gem 'rails_12factor'
 
- gem 'devise'
+ruby '2.1.2'
 
- gem 'rails-erd'
+gem 'devise'
 
- gem 'd3-rails'
+gem 'rails-erd'
 
- gem 'c3-rails'
+gem 'd3-rails'
+
+gem 'c3-rails'
