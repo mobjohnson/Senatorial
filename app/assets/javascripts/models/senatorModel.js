@@ -76,12 +76,12 @@ App.SenatorModel = Backbone.Model.extend({
               this.Record2 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
               self.parentObject.congressrecords.add(this.Record2);
 
-              // Add sr_senator to Linechart
-              App.LineChart.push([this.sr_senator]);
-              console.log('senatorModel LineChart:', App.LineChart)
-              // Add jr_senator to Linechart
-              App.LineChart.push([this.jr_senator]);
-              console.log('senatorModel LineChart:', App.LineChart);
+              // // Add sr_senator to Linechart
+              // App.LineChart.push([this.sr_senator]);
+              // console.log('senatorModel LineChart:', App.LineChart)
+              // // Add jr_senator to Linechart
+              // App.LineChart.push([this.jr_senator]);
+              // console.log('senatorModel LineChart:', App.LineChart);
             },
 
           });
