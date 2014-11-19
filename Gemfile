@@ -46,6 +46,8 @@ gem 'rails_12factor'
 
 ruby '2.1.2'
 
+gem 'foundation-rails'
+
 gem 'devise'
 
 gem 'rails-erd'
