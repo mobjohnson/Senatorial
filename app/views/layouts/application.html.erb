@@ -68,31 +68,16 @@
 
   <script>
 
-    // Variable being abandoned
-    LineChartVar = '';
-
     // This starts everything!!!
     App = {
       Models: {},
       Views: {},
       Collections: {},
       TempData: {},
-      // Being abandoned
-      LineChart: {}
     };
 
     // Instantiate searchItems collection. Does not fetch yet
     App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;
-
-    // Instantiate LineChart - being abandoned 
-    App.LineChart = [];
-
-    
-    // // Instantiate congressRecords collection. Does not fetch yet
-    // App.TempData.congressRecords = {};
-
-    // // Instantiate linechart variable. Does not set yet
-    // App.TempData.linechart = {};
 
   </script>
 
