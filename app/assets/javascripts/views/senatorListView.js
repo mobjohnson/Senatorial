@@ -10,31 +10,13 @@ App.SenatorListView = Backbone.View.extend({
     console.log('congressRecordListView#initialize this: ', this);   
     this.addAll();
 
-    // Add Record1 model to senatorCollection
-
-    // this.collection.create(this.Record1, { 
-    //   success: function(){
-    //     console.log('collection Record1 appended');
-    //   }
-    // });
- 
     this.collection.add(this);
-
-    // Add Record2 model to senatorCollection
-
-    // this.collection.create(this.Record2, { 
-    //   success: function(){
-    //     console.log('collection Record2 appended');
-    //   }
-    // });
-
   },
 
-  addOne: function(senator){ // removed el
+  addOne: function(senator){ 
      console.log('inside senatorListView#addOne this:', this);
     var senatorView = new SenatorView({ model: senator});
     senatorView.$el.insertAfter(this.$('span.add-senator'));
-    // this.collection.add(senator); // added
   },
 
   addAll: function(){
