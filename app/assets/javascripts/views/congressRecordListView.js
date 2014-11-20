@@ -10,21 +10,13 @@ App.CongressRecordListView = Backbone.View.extend({
     console.log('congressRecordListView#initialize this: ', this);
     this.addAll();
 
-    // Add congressRecord model to congressRecordCollection
-
-    // this.collection.create(this, { 
-    //   success: function(){
-    //     console.log('collection congressRecord appended');
-    //   }
-    // });
-    this.test = this.collection // added
     if (this.test === undefined) {
       } else {
       this.collection.create(this);
     }
   },
 
-  addOne: function(congressRecord){ // removed el
+  addOne: function(congressRecord){
     console.log('inside congressRecordListView#addOne this:', this);
     var congressRecordView = new CongressRecordView({ model: congressRecord});
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));
