@@ -4,16 +4,6 @@ App.SenatorModel = Backbone.Model.extend({
     return "https://www.govtrack.us/api/v2/role?role_type=senator&state=" + this.state + "&current=true";   
   },
 
-  // defaults for attributes for state, name and bioguideid from GovTrack.us
-  // defaults:{
-  //   phrase: '',
-  //   state: '',
-  //   sr_senator: '',
-  //   jr_senator: '',
-  //   sr_member_ref: '',
-  //   jr_member_ref: ''
-  // },
-
   initialize: function(params){
     var self = this;
     this.params = params // added
@@ -30,10 +20,6 @@ App.SenatorModel = Backbone.Model.extend({
       } else {
         if (this.state === undefined) {
           } else {
-          // this.phrase = params.phrase;
-          // this.state = params.state;
-          // this.Record1 ='',
-          // this.Record2 = '',
           console.log('senatorModel (#initialize) this.state', this.state);
 
           // do fetch
@@ -76,17 +62,10 @@ App.SenatorModel = Backbone.Model.extend({
               this.Record2 = new App.CongressRecordModel({phrase: params.phrase, senator_name: this.jr_senator, bioguideid: this.jr_member_ref});
               self.parentObject.congressrecords.add(this.Record2);
 
-              // // Add sr_senator to Linechart
-              // App.LineChart.push([this.sr_senator]);
-              // console.log('senatorModel LineChart:', App.LineChart)
-              // // Add jr_senator to Linechart
-              // App.LineChart.push([this.jr_senator]);
-              // console.log('senatorModel LineChart:', App.LineChart);
             },
 
           });
         }
-      // this.collection.add(this);  
       }
     }     
   },
