@@ -30,7 +30,7 @@ App.SenatorModel = Backbone.Model.extend({
               console.log('senatorModel (#initialize/this.fetch/#success) data:', data);
               console.log('senatorModel (#initialize/this.fetch/#success) this', this);
           
-              // console.log('senatorModel (this.data.changed.objects[0].person.name) this.sr_senator: ',this.sr_senator);
+              console.log('senatorModel (this.data.changed.objects[0].person.name) this.sr_senator: ',this.sr_senator);
             
               if (data.changed.objects[0]) {
                 // sets sr_senator 
