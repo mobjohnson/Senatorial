@@ -55,10 +55,6 @@ var SearchItemView = Backbone.View.extend({
         var results = recordCollection.models[i].attributes.results
 
 
-        // console.log('--- recordCollection.models[i].attributes.results.length', recordCollection.models[i].attributes.results.length);
-
-        // var arrayLength = recordCollection.models[i].attributes.results.length
-
         // // Add the six record counts to chartValus Array
         for (var j = 0; j < results.length; j++) {
           chartValue.push(results[j].count);
