@@ -34,34 +34,30 @@ var SearchItemView = Backbone.View.extend({
 
     // render one chart for each searchItem
 
-    console.log(' +++ this in render:', this);
-    console.log(' +++ recordCollection in render:', recordCollection);
+    console.log('searchItemView - recordCollection in render:', recordCollection);
 
-    // var chartValue = [];
     var chartValues = [];
     for (var i = 1; i < recordCollection.models.length; i++) {
 
-      console.log("!!!!-!!!! --- > recordCollection: ", recordCollection.models)
-
       var chartValue = [];
-      console.log('--- recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
+      console.log('recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
 
       // Add the senator name to chartValue array
       chartValue.push(recordCollection.models[i].attributes.senator_name);
 
       if (recordCollection.models[i].attributes.results != undefined){
-        console.log('--- recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
+        console.log('recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
 
         var results = recordCollection.models[i].attributes.results
 
 
-        // // Add the six record counts to chartValus Array
+        // // Add the record counts to chartValues Array
         for (var j = 0; j < results.length; j++) {
           chartValue.push(results[j].count);
         };
         // Add this chartValue to chartValues array
         chartValues.push(chartValue);
-        console.log('+++++ chartValues: ', chartValues);
+        console.log('chartValues: ', chartValues);
 
       };
     };
