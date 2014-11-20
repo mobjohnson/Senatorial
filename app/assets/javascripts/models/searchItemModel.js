@@ -7,25 +7,13 @@ App.SearchItemModel = Backbone.Model.extend({
     this.state2 = params.state2;
     this.phrase = params.phrase;
     this.congressrecords = new App.CongressRecordCollection({});
-    // create new senatorModel and adding attributes to this model for state1Senator
-    // if (this.state1 === undefined){
-      // } else {      
-      this.state1Senator = new App.SenatorModel({phrase: this.phrase, state: this.state1, parentObject: this});
-      // App.SenatorCollection.add(this.state1Senator);
-    // }
-
-
+    // create new senatorModel and adding attributes to this model for state1Senator  
+    this.state1Senator = new App.SenatorModel({phrase: this.phrase, state: this.state1, parentObject: this});
 
     // creating new senatorModel and adding attributes to this model for state1Senator
-    // if (this.state2 === undefined){
-      // } else {      
-      this.state2Senator = new App.SenatorModel({phrase: this.phrase, state: this.state2, parentObject: this});      
-      // this.collection.add(this.state2Senator); 
-    // }
-
-
+    
+    this.state2Senator = new App.SenatorModel({phrase: this.phrase, state: this.state2, parentObject: this});      
 
   },
-
 
 });
