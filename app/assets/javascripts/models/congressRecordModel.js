@@ -1,7 +1,7 @@
 App.CongressRecordModel = Backbone.Model.extend({
 
   url: function(){
-    return "http://capitolwords.org/api/1/dates.json?phrase=" + this.phrase + "&bioguide_id=" + this.bioguideid + "&start_date= 2014-04-01&end_date=2014-11-01&granularity=month&apikey=3fdb489020354ae7b4e1a1bf75b4a279"
+    return "http://capitolwords.org/api/1/dates.json?phrase=" + this.phrase + "&bioguide_id=" + this.bioguideid + "&start_date= 2013-12-31&end_date=2014-11-01&granularity=month&apikey=3fdb489020354ae7b4e1a1bf75b4a279"
   },
 
   // Defaults for name and bioguideid for Capital Words API, and placeholder for array return
