@@ -12,15 +12,6 @@ This is a single page app, that has a Rails backend on the first model and is us
 
 [Visit Senatorial] (https://secure-plains-1434.herokuapp.com/)
 
-###User stories completed:
-- As a guest, I can visit a homepage that links to sign-in and sign-up pages.
-- As a user, I can sign-in to my account.
-- As a guest, I can sign-up for an account.
-- As a user, I can view, edit, and delete outings that I've created in the past.
-- As a user, I can create a new outing by selecting a location and a date range.
-- As a user, I can add events to my outing by selecting markers on a map.
-- As a user, I can share my outing with others via email.
-
 Senatorial uses two external APIs:
 GovTrak.us: https://www.govtrack.us/developers/api
 Capitogit statusl Words: http://tryit.sunlightfoundation.com/capitolwords
@@ -34,7 +25,7 @@ For list of user stories and backlog, see our public Pivitol Tracker: https://ww
 - Ruby on Rails
 - Backbone.js
 - D3.js
-- C#.js
+- C3.js
 
 ###ERD:
 
