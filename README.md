@@ -29,7 +29,7 @@ For list of user stories and backlog, see our public Pivitol Tracker: https://ww
 
 ###ERD:
 
-![](app/assets/images/SenatorialERD.png)
+![](app/assets/images/erd.png)
 
 ### Local Setup
 
