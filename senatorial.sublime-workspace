@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"record",
+				"recordCollection"
+			],
+			[
+				"char",
+				"chartValue"
+			],
+			[
+				"chartVau",
+				"chartValues"
+			],
+			[
+				"congressrecord",
+				"congressrecords"
+			],
+			[
 				"num",
 				"numArray"
 			],
@@ -66,10 +82,6 @@
 			[
 				"congress",
 				"congressRecordListView"
-			],
-			[
-				"record",
-				"recordCounts"
 			],
 			[
 				"sr",
@@ -304,10 +316,6 @@
 				"characters"
 			],
 			[
-				"char",
-				"characters"
-			],
-			[
 				"cha",
 				"characters"
 			],
@@ -506,24 +514,27 @@
 			[
 				"largest",
 				"largest"
-			],
-			[
-				"cat",
-				"category"
-			],
-			[
-				"tit",
-				"title"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Senatorial</title>\n  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>\n  <%= csrf_meta_tags %>\n</head>\n<body>\n  <header>\n    <h1>Senatorial</h1>\n  </header>\n  <div id='search-item-form'></div>\n  <div id='search-item-list'>\n    <span class='add'>Add a Search Item</span>\n  </div>\n  <div id='senator-list'>\n    <span class='add-senator'></span>\n`     <div id='congress-record-list'>\n    <span class='add-congress-record'><h2>Congressional Records Chart</h2><h3>Showing use of phrase in Congress by senators during prior months</h3></span>\n  </div>\n\n  <footer>Brought to you by a former fan of C-SPAN: America's Network!!!\n  </footer>\n\n  <!-- Template for showing search items along with Delete, Edit and Run Search -->\n  <script type=\"text/x-handlebars-template\" id=\"search-item-template\">\n    <div id={{id}}>\n      <h3>States: {{state1}} and {{state2}}, using search phrase: {{phrase}}</h3>\n      <span class='destroy'>Delete</span>\n      <!-- <span class='edit'>Edit</span>\n\n      <a class='runlink' href=\"#/senators/{{state1}}/{{state2}}/{{phrase}}\">\n      <span class='run'>Run Search</span>\n      </a>\n    </div> -->\n  </script>\n\n  <!-- Template for form for adding new searchItems -->\n  <script type=\"text/x-handlebars-template\" id='search-item-form-template'>\n    <div class='search-item-form-div'>\n      <input type=\"text\" name=\"state1\" placeholder=\"State like: CA\">\n      <input type=\"text\" name=\"state2\" placeholder=\"State like: NV\">\n      <input type=\"text\" name=\"phrase\" placeholder=\"Phrase: health\">\n      {{#if this}}\n      <span class='edit-search-item'>Edit Search Item</span>\n      {{else}}\n      <span class='new-search-item'>New Search Item</span>\n      {{/if}}\n      <span class='cancel'>Cancel</span>\n    </div>\n  </script>\n\n  <!-- Template for adding new senators -->\n  <script type=\"text/x-handlebars-template\" id=\"senator-template\">\n  </script>\n\n  <!-- Template for showing new congressRecords -->\n  <script type=\"text/x-handlebars-template\" id=\"congress-record-template\">\n    <div id={{id}}>\n\n      <div id=\"chart2{{id}}\"></div>\n\n      <span class='add-congress-record'></span>\n     \n    </div>\n  </script>\n\n  <script>\n\n    // This starts everything!!!\n    App = {\n      Models: {},\n      Views: {},\n      Collections: {},\n      TempData: {},\n    };\n\n    // Instantiate searchItems collection. Does not fetch yet\n    App.TempData.searchItems = <%= @search_items.to_json.html_safe %>;\n\n  </script>\n\n  <%= javascript_include_tag \"application\" %>\n\n</body>\n</html>\n",
 			"file": "app/views/layouts/application.html.erb",
+			"file_size": 2569,
+			"file_write_time": 1416591560000000,
 			"settings":
 			{
-				"buffer_size": 3131,
+				"buffer_size": 2564,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 1399,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,32 +542,16 @@
 			"file": "app/assets/javascripts/routers/router.js",
 			"settings":
 			{
-				"buffer_size": 3911,
+				"buffer_size": 3652,
 				"line_ending": "Unix",
 				"name": "router.js"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/collections/searchItemCollection.js",
-			"settings":
-			{
-				"buffer_size": 190,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "app/assets/javascripts/models/searchItemModel.js",
 			"settings":
 			{
-				"buffer_size": 963,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/views/searchItemListView.js",
-			"settings":
-			{
-				"buffer_size": 895,
+				"buffer_size": 815,
 				"line_ending": "Unix"
 			}
 		},
@@ -564,23 +559,7 @@
 			"file": "app/assets/javascripts/views/searchItemView.js",
 			"settings":
 			{
-				"buffer_size": 1307,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/views/formView.js",
-			"settings":
-			{
-				"buffer_size": 1401,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/collections/senatorCollection.js",
-			"settings":
-			{
-				"buffer_size": 178,
+				"buffer_size": 3071,
 				"line_ending": "Unix"
 			}
 		},
@@ -588,15 +567,7 @@
 			"file": "app/assets/javascripts/models/senatorModel.js",
 			"settings":
 			{
-				"buffer_size": 3509,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/views/senatorListView.js",
-			"settings":
-			{
-				"buffer_size": 1290,
+				"buffer_size": 3069,
 				"line_ending": "Unix"
 			}
 		},
@@ -604,15 +575,7 @@
 			"file": "app/assets/javascripts/views/senatorView.js",
 			"settings":
 			{
-				"buffer_size": 479,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/collections/congressRecordCollection.js",
-			"settings":
-			{
-				"buffer_size": 209,
+				"buffer_size": 451,
 				"line_ending": "Unix"
 			}
 		},
@@ -620,7 +583,7 @@
 			"file": "app/assets/javascripts/models/congressRecordModel.js",
 			"settings":
 			{
-				"buffer_size": 2774,
+				"buffer_size": 1691,
 				"line_ending": "Unix"
 			}
 		},
@@ -628,7 +591,7 @@
 			"file": "app/assets/javascripts/views/congressRecordListView.js",
 			"settings":
 			{
-				"buffer_size": 1536,
+				"buffer_size": 1105,
 				"line_ending": "Unix"
 			}
 		},
@@ -641,10 +604,10 @@
 			}
 		},
 		{
-			"file": "app/assets/javascripts/views/linechartView.js",
+			"file": "app/assets/stylesheets/style.css",
 			"settings":
 			{
-				"buffer_size": 529,
+				"buffer_size": 3917,
 				"line_ending": "Unix"
 			}
 		}
@@ -681,22 +644,38 @@
 	},
 	"file_history":
 	[
-		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/application.js",
-		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/senatorView.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/searchItemListView.js",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/senatorListView.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/formView.js",
+		"/Users/mj/dev/wdi/w13/senatorial/Gemfile",
+		"/Users/mj/dev/wdi/w13/senatorial/README.md",
+		"/Users/mj/dev/wdi/w13/senatorial/README.rdoc",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/collections/congressRecordCollection.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/collections/searchItemCollection.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/views/layouts/application_from_foundation.html.erb",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/collections/senatorCollection.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/linechartView.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/stylesheets/application.css",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/mj/dev/wdi/w13/senatorial/app/views/layouts/application_b4_foundation.html.erb",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/application.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/stylesheets/style.css",
+		"/Users/mj/dev/wdi/w13/senatorial/app/mailers/.keep",
+		"/Users/mj/dev/wdi/w13/senatorial/db/seeds.rb",
+		"/Users/mj/dev/wdi/w13/senatorial/app/controllers/search_items_controller.rb",
+		"/Users/mj/dev/wdi/w13/senatorial/spec/models/search_item_spec.rb",
+		"/Users/mj/dev/wdi/w13/senatorial/spec/controllers/search_items_controller_spec.rb",
+		"/Users/mj/dev/wdi/w13/senatorial/spec/models/search_item.rb",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/temp.js",
+		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/senatorView.js",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/ref.js",
 		"/Users/mj/dev/wdi/w13/senatorial/.git/COMMIT_EDITMSG",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/models/senatorModel.js",
-		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/linechartView.js",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/linechart.js",
 		"/Users/mj/dev/wdi/w13/senatorial/vendor/assets/stylesheets/applications.css",
-		"/Users/mj/dev/wdi/w13/senatorial/db/seeds.rb",
 		"/Users/mj/dev/wdi/w13/senatorial/vendor/assets/javascripts/require.js",
-		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/collections/senatorCollection.js",
-		"/Users/mj/dev/wdi/w13/senatorial/Gemfile",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/models/congressRecord.js",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/models/search_item.wasjs",
-		"/Users/mj/dev/wdi/w13/senatorial/app/controllers/search_items_controller.rb",
 		"/Users/mj/dev/wdi/w13/senatorial/app/views/layouts/application.html.erb",
 		"/Users/mj/dev/wdi/w13/senatorial/db/schema.rb",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/search_item_profile_view.wasjs",
@@ -706,7 +685,6 @@
 		"/Users/mj/dev/wdi/w13/senatorial/app/controllers/application_controller.rb",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/main.js",
 		"/Users/mj/dev/wdi/w13/senatorial/app/assets/javascripts/views/search_item_list_view.js",
-		"/Users/mj/dev/wdi/w13/senatorial/app/assets/stylesheets/application.css",
 		"/Users/mj/dev/wdi/w13/senatorial/app/controllers/senators_controller.rb",
 		"/Users/mj/dev/wdi/w13/senatorial/.git/MERGE_MSG",
 		"/Users/mj/dev/wdi/w13/senatorial/config/routes.rb",
@@ -793,22 +771,7 @@
 		"/Users/mj/Sites/WDI/wdidc2/w04/d02/students/Martin/morning_rails/tweeter/app/controllers/application_controller.rb",
 		"/Users/mj/Sites/WDI/wdidc2/w04/d02/students/Martin/jobbed_out/views/users.erb",
 		"/Users/mj/Sites/WDI/wdidc2/w04/d02/students/Martin/jobbed_out/views/user.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d05/students/Martin/super/superheroes.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d04/ultimate_compliment.md",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/views/add.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/schema.sql",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/views/index.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/views/layout.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/views/calculator.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/calc/app.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/views/html.erb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/app.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/rock_paper_scissors.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/guest_book.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d03/students/Martin/hello_world.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d02/homework/nba_stats/sql_commands.txt",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d02/students/Martin/active-record/musicals/musical.rb",
-		"/Users/mj/Sites/WDI/wdidc2/w03/d02/students/Martin/active-record/musicals/schema.sql"
+		"/Users/mj/Sites/WDI/wdidc2/w03/d05/students/Martin/super/superheroes.erb"
 	],
 	"find":
 	{
@@ -827,6 +790,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"favicon",
 			"linechart",
 			"            ",
 			"this",
@@ -948,7 +912,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -956,43 +920,69 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 3131,
+						"buffer_size": 2564,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								200,
-								200
+								427,
+								427
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/ERB Autocomplete/erb.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 71.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/assets/javascripts/routers/router.js",
+					"file": "app/assets/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 3911,
+						"buffer_size": 1399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1464,
-								1464
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 295.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/routers/router.js",
+					"settings":
+					{
+						"buffer_size": 3652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1019,
+								1019
 							]
 						],
 						"settings":
@@ -1004,34 +994,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 661.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/javascripts/collections/searchItemCollection.js",
-					"settings":
-					{
-						"buffer_size": 190,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								129,
-								129
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 265.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1041,15 +1004,15 @@
 					"file": "app/assets/javascripts/models/searchItemModel.js",
 					"settings":
 					{
-						"buffer_size": 963,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								687,
-								687
+								596,
+								596
 							]
 						],
 						"settings":
@@ -1065,18 +1028,47 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/assets/javascripts/views/searchItemListView.js",
+					"file": "app/assets/javascripts/views/searchItemView.js",
 					"settings":
 					{
-						"buffer_size": 895,
+						"buffer_size": 3071,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								758,
-								758
+								1117,
+								1117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 398.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/models/senatorModel.js",
+					"settings":
+					{
+						"buffer_size": 3069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
 							]
 						],
 						"settings":
@@ -1093,19 +1085,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/assets/javascripts/views/searchItemView.js",
+					"buffer": 6,
+					"file": "app/assets/javascripts/views/senatorView.js",
 					"settings":
 					{
-						"buffer_size": 1307,
+						"buffer_size": 451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								762,
-								762
+								438,
+								438
 							]
 						],
 						"settings":
@@ -1116,59 +1108,25 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 446.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "app/assets/javascripts/views/formView.js",
-					"settings":
-					{
-						"buffer_size": 1401,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								591,
-								591
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"sheets":
-			[
-				{
 					"buffer": 7,
-					"file": "app/assets/javascripts/collections/senatorCollection.js",
+					"file": "app/assets/javascripts/models/congressRecordModel.js",
 					"settings":
 					{
-						"buffer_size": 178,
+						"buffer_size": 1691,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								111,
-								111
+								843,
+								843
 							]
 						],
 						"settings":
@@ -1186,18 +1144,18 @@
 				},
 				{
 					"buffer": 8,
-					"file": "app/assets/javascripts/models/senatorModel.js",
+					"file": "app/assets/javascripts/views/congressRecordListView.js",
 					"settings":
 					{
-						"buffer_size": 3509,
+						"buffer_size": 1105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								789,
-								789
+								545,
+								545
 							]
 						],
 						"settings":
@@ -1208,158 +1166,13 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 181.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "app/assets/javascripts/views/senatorListView.js",
-					"settings":
-					{
-						"buffer_size": 1290,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1064,
-								1064
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 446.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/assets/javascripts/views/senatorView.js",
-					"settings":
-					{
-						"buffer_size": 479,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								363,
-								363
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/assets/javascripts/collections/congressRecordCollection.js",
-					"settings":
-					{
-						"buffer_size": 209,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "app/assets/javascripts/models/congressRecordModel.js",
-					"settings":
-					{
-						"buffer_size": 2774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1546,
-								1546
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1301.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "app/assets/javascripts/views/congressRecordListView.js",
-					"settings":
-					{
-						"buffer_size": 1536,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1289,
-								1289
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 693.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
 					"file": "app/assets/javascripts/views/congressRecordView.js",
 					"settings":
 					{
@@ -1388,25 +1201,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "app/assets/javascripts/views/linechartView.js",
+					"buffer": 10,
+					"file": "app/assets/stylesheets/style.css",
 					"settings":
 					{
-						"buffer_size": 529,
+						"buffer_size": 3917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								325,
-								325
+								181,
+								181
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1434,18 +1247,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.514329663212,
 			1.0
 		],
 		"rows":
@@ -1524,6 +1330,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 119.0,
+	"side_bar_width": 148.0,
 	"status_bar_visible": false
 }
