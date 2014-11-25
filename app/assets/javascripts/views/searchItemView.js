@@ -67,7 +67,7 @@ var SearchItemView = Backbone.View.extend({
       };
 
 
-    },
+    };
       
 
 
