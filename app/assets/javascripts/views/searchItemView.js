@@ -37,30 +37,38 @@ var SearchItemView = Backbone.View.extend({
     console.log('searchItemView - recordCollection in render:', recordCollection);
 
     var chartValues = [];
-    for (var i = 1; i < recordCollection.models.length; i++) {
 
-      var chartValue = [];
-      console.log('recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
+    // set up for test for undefined
+    this.models = recordCollection.models
+    if (this.models != undefined){
+      for (var i = 1; i < recordCollection.models.length; i++) {
 
-      // Add the senator name to chartValue array
-      chartValue.push(recordCollection.models[i].attributes.senator_name);
+        var chartValue = [];
+        console.log('recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
 
-      if (recordCollection.models[i].attributes.results != undefined){
-        console.log('recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
+        // Add the senator name to chartValue array
+        chartValue.push(recordCollection.models[i].attributes.senator_name);
 
-        var results = recordCollection.models[i].attributes.results
+        if (recordCollection.models[i].attributes.results != undefined){
+          console.log('recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
+
+          var results = recordCollection.models[i].attributes.results
 
 
-        // // Add the record counts to chartValues Array
-        for (var j = 0; j < results.length; j++) {
-          chartValue.push(results[j].count);
+          // // Add the record counts to chartValues Array
+          for (var j = 0; j < results.length; j++) {
+            chartValue.push(results[j].count);
+          };
+          // Add this chartValue to chartValues array
+          chartValues.push(chartValue);
+          console.log('chartValues: ', chartValues);
+
         };
-        // Add this chartValue to chartValues array
-        chartValues.push(chartValue);
-        console.log('chartValues: ', chartValues);
-
       };
-    };
+
+
+    },
+      
 
 
     var chart2 = c3.generate({
