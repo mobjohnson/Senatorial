@@ -18,7 +18,7 @@ Based on two states and phrase query selections by the user, data is pulled from
 
 ###Backlog: 
 
-![](app/assets/images/.png)
+![](app/assets/images/SenatorialUserStories.png)
 
 ###Technology used:
 - Ruby on Rails
@@ -28,7 +28,7 @@ Based on two states and phrase query selections by the user, data is pulled from
 
 ###ERD:
 
-![](app/assets/images/SenatorialUserStories.png)
+![](app/assets/images/erd.png)
 
 ### Local Setup
 
