@@ -54,7 +54,6 @@ var SearchItemView = Backbone.View.extend({
 
           var results = recordCollection.models[i].attributes.results
 
-
           // // Add the record counts to chartValues Array
           for (var j = 0; j < results.length; j++) {
             chartValue.push(results[j].count);
@@ -65,12 +64,9 @@ var SearchItemView = Backbone.View.extend({
 
         };
       };
-
-
     };
       
-
-
+    // C3 template for D3 linechart
     var chart2 = c3.generate({
       bindto: '#chart2',
       data: {
