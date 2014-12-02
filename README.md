@@ -17,7 +17,8 @@ Capitol Words: http://tryit.sunlightfoundation.com/capitolwords
 Based on two states and phrase query selections by the user, data is pulled from the GobTrak API and subsequently passed to the Capital Words API.
 
 ###Backlog: 
-For list of user stories and backlog, see the public Pivitol Tracker: https://www.pivotaltracker.com/s/projects/1195932.
+
+![](app/assets/images/.png)
 
 ###Technology used:
 - Ruby on Rails
@@ -27,7 +28,7 @@ For list of user stories and backlog, see the public Pivitol Tracker: https://ww
 
 ###ERD:
 
-![](app/assets/images/erd.png)
+![](app/assets/images/SenatorialUserStories.png)
 
 ### Local Setup
 
