@@ -12,7 +12,7 @@ This is a single page app that has a Rails backend on the first model and is usi
 
 Senatorial uses two external APIs:
 GovTrak.us: https://www.govtrack.us/developers/api
-Capitogit statusl Words: http://tryit.sunlightfoundation.com/capitolwords
+Capitol Words: http://tryit.sunlightfoundation.com/capitolwords
 
 Based on two states and phrase query selections by the user, data is pulled from the GobTrak API and subsequently passed to the Capital Words API.
 
