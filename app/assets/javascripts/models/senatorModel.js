@@ -13,9 +13,6 @@ App.SenatorModel = Backbone.Model.extend({
       this.state = params.state; // added
       this.parentObject = params.parentObject;
 
-      console.log('params.parent', params.parentobject);
-      console.log('this.parent', this.parentObject);
-
       if (this.phrase === undefined) {
       } else {
         if (this.state === undefined) {

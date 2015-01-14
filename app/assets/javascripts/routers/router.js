@@ -74,20 +74,16 @@ App.Router = Backbone.Router.extend({
     console.log('in runSearch', state1, state2, phrase);
     this.state1 = state1;
     this.state2 = state2;
-    if (this.state1 === undefined){
-    } else {
-      if (this.state2 === undefined){
-        var activeSearch = new App.SearchItemModel({state1: this.state1, state2: this.state2, phrase: phrase});
-        console.log(activeSearch);
-      } 
+    if (this.state1 !== undefined){
+      var activeSearch = new App.SearchItemModel({state1: this.state1, state2: this.state2, phrase: phrase});
+        console.log(activeSearch);     
     }
   },
 
   runRecord: function(phrase, bioguideid){
     console.log('in runRecord',phrase, bioguideid);
     this.phrase = phrase;
-    if (this.phrase === undefined){
-    } else {
+    if (this.phrase !== undefined){
       var activeCongressRecord = new App.CongressRecordModel({phrase: this.phrase, bioguideid: bioguideid});
       console.log(activeCongressRecord);
     }
@@ -107,7 +103,6 @@ App.Router = Backbone.Router.extend({
 
     // Show lineChart
     $('#linechart').show();
-
   }
 
 });
