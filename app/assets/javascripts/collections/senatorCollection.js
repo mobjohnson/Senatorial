@@ -4,6 +4,4 @@ App.SenatorCollection = Backbone.Collection.extend({
   initialize: function(){
     console.log('New Senator Collection');
   }
-
-
 });

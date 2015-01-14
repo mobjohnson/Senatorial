@@ -5,8 +5,7 @@ App.CongressRecordModel = Backbone.Model.extend({
   },
 
   initialize: function(params){
-    if (params.phrase === undefined){
-    } else {
+    if (params.phrase != undefined){
       this.phrase = params.phrase;
       this.senator_name = params.senator_name;
       this.bioguideid = params.bioguideid;

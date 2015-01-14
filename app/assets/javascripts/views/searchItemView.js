@@ -15,10 +15,8 @@ var SearchItemView = Backbone.View.extend({
  
      // listen for a change to collection of congressrecords associated with this searchItem model 
     this.listenTo(this.model.congressrecords, 'change', this.changeCongressRecord);
-
     var source = $('#search-item-template').html();
     this.template = Handlebars.compile(source);
-
     this.render(this.model.congressrecords);
   },
 
@@ -29,13 +27,8 @@ var SearchItemView = Backbone.View.extend({
   },
 
   render: function(recordCollection){
-    // dynamic chart
-    // have a counter to check that all four congressRecords are there 
-
     // render one chart for each searchItem
-
     console.log('searchItemView - recordCollection in render:', recordCollection);
-
     var chartValues = [];
 
     // set up for test for undefined
@@ -51,7 +44,6 @@ var SearchItemView = Backbone.View.extend({
 
         if (recordCollection.models[i].attributes.results != undefined){
           console.log('recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
-
           var results = recordCollection.models[i].attributes.results
 
           // // Add the record counts to chartValues Array
@@ -98,7 +90,7 @@ var SearchItemView = Backbone.View.extend({
 
 
   onRun: function(){
-    console.log('I am in onRun in SearchItemView')
+    console.log('onRun in SearchItemView')
     // we want something like http://localhost:3000/#/senators/VA/MD/Iraq
     App.router.navigate('/senators/' + this.model.state1 + '/' + this.model.state2 + '/' + this.model.phrase, { trigger: true });
   }

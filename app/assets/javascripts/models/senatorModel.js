@@ -7,16 +7,13 @@ App.SenatorModel = Backbone.Model.extend({
   initialize: function(params){
     var self = this;
     this.params = params // added
-    if (this.params === undefined) {
-      } else {
+    if (this.params != undefined) {
       this.phrase = params.phrase; // added
       this.state = params.state; // added
       this.parentObject = params.parentObject;
 
-      if (this.phrase === undefined) {
-      } else {
-        if (this.state === undefined) {
-          } else {
+      if (this.phrase != undefined) {
+        if (this.state != undefined) {
           console.log('senatorModel (#initialize) this.state', this.state);
 
           // do fetch
