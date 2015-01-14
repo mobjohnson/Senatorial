@@ -6,12 +6,9 @@ var SenatorView = Backbone.View.extend({
   initialize: function(){
     console.log('New Senator View');
     this.listenTo(this.model, 'change', this.render)
-
     var source = $('#senator-template').html();
     this.template = Handlebars.compile(source);
-
     this.render();
-
   },
 
   render: function(){

@@ -31,7 +31,6 @@ App.SearchItemFormView = Backbone.View.extend({
       state2: this.$("[name='state2']").val(),
       phrase: this.$("[name='phrase']").val()
     };
-
     return data;
   },
 
@@ -64,10 +63,5 @@ App.SearchItemFormView = Backbone.View.extend({
 
 
 });
-
-
-
-
-
 
 

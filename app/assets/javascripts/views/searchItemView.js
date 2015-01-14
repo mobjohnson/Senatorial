@@ -91,7 +91,7 @@ var SearchItemView = Backbone.View.extend({
 
   onRun: function(){
     console.log('onRun in SearchItemView')
-    // we want something like http://localhost:3000/#/senators/VA/MD/Iraq
+    // we want something like http://localhost:3000/#/senators/CA/NV/health
     App.router.navigate('/senators/' + this.model.state1 + '/' + this.model.state2 + '/' + this.model.phrase, { trigger: true });
   }
 });

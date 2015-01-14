@@ -9,11 +9,6 @@ App.CongressRecordListView = Backbone.View.extend({
     this.listenTo(this.collection, 'reset', this.addAll);
     console.log('congressRecordListView#initialize this: ', this);
     this.addAll();
-
-    if (this.test === undefined) {
-      } else {
-      this.collection.create(this);
-    }
   },
 
   addOne: function(congressRecord){
@@ -21,11 +16,6 @@ App.CongressRecordListView = Backbone.View.extend({
     var congressRecordView = new CongressRecordView({ model: congressRecord});
     congressRecordView.$el.insertAfter(this.$('span.add-congress-record'));
     var models = this.collection.models;
-
-    this.senatorArray = [];
- 
-    console.log('break congressRecordListView line 30');
-
   },
 
   addAll: function(){

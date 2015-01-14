@@ -9,7 +9,6 @@ var LinechartView = Backbone.View.extend({
 
     var source = $('#linechart-template').html();
     this.template = Handlebars.compile(source);
-
     this.render();
   },
 

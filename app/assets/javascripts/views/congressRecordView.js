@@ -9,7 +9,6 @@ var CongressRecordView = Backbone.View.extend({
 
     var source = $('#congress-record-template').html();
     this.template = Handlebars.compile(source);
-
     this.render();
   },
 
