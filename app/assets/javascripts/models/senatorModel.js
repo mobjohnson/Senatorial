@@ -34,7 +34,7 @@ App.SenatorModel = Backbone.Model.extend({
               } else {
    
               }
-              console.log('senatorModel (data.changed.objects[0].person.name) this.sr_senator: ',this.srSenator);
+              console.log('senatorModel (data.changed.objects[0].person.name) this.srSenator: ',this.srSenator);
               // sets jr_senator based upon data.changed
               if (data.changed.objects[1]) {
                 this.jrSenator = data.changed.objects[1].person.name;
@@ -44,16 +44,16 @@ App.SenatorModel = Backbone.Model.extend({
 
 
               }
-              console.log('senatorModel (data.changed.objects[1].person.name) this.jr_senator: ', this.jrSenator);
+              console.log('senatorModel (data.changed.objects[1].person.name) this.jrSenator: ', this.jrSenator);
 
-              console.log('senatorModel (data.changed.objects[0].person.bioguideid) this.sr_member_ref: ', this.srMemberRef);       
+              console.log('senatorModel (data.changed.objects[0].person.bioguideid) this.srMemberRef: ', this.srMemberRef);       
 
-              console.log('senatorModel (data.changed.objects[1].person.bioguideid) this.jr_member_ref: ', this.jrMemberRef);  
+              console.log('senatorModel (data.changed.objects[1].person.bioguideid) this.jrMemberRef: ', this.jrMemberRef);  
               // creating new congressRecordModel and adding attributes to this model for sr_senator
-              this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senatorName: this.srSenator, bioguideid: this.srMember_ref});
+              this.Record1 = new App.CongressRecordModel({phrase: params.phrase, senatorName: this.srSenator, bioguideid: this.srMemberRef});
               self.parentObject.congressrecords.add(this.Record1);
               // creating new congressRecordModel and adding attributes to this model for jr_senator
-              this.Record2 = new App.CongressRecordModel({phrase: params.phrase, senatorMame: this.jrSenator, bioguideid: this.jrMemberRef});
+              this.Record2 = new App.CongressRecordModel({phrase: params.phrase, senatorName: this.jrSenator, bioguideid: this.jrMemberRef});
               self.parentObject.congressrecords.add(this.Record2);
 
             },
