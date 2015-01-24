@@ -89,8 +89,8 @@ App.Router = Backbone.Router.extend({
     }
   },
 
-  loadChart: function(senator_name, recordCounts){
-    console.log('in loadChart', senator_name, recordCounts);
+  loadChart: function(senatorName, recordCounts){
+    console.log('in loadChart', senatorName, recordCounts);
  
     // Find the specific congressRecord to reference
     var congressRecord = App.Collections.congressRecords.get(congressRecordId);

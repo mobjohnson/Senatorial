@@ -37,10 +37,10 @@ var SearchItemView = Backbone.View.extend({
       for (var i = 1; i < recordCollection.models.length; i++) {
 
         var chartValue = [];
-        console.log('recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senator_name);
+        console.log('recordCollection.models[i].attributes.senator_name', recordCollection.models[i].attributes.senatorName);
 
         // Add the senator name to chartValue array
-        chartValue.push(recordCollection.models[i].attributes.senator_name);
+        chartValue.push(recordCollection.models[i].attributes.senatorName);
 
         if (recordCollection.models[i].attributes.results != undefined){
           console.log('recordCollection.models[i].attributes.results', recordCollection.models[i].attributes.results);
