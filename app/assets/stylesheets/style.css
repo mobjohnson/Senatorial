@@ -5,13 +5,16 @@ body {
 }
 
 header {
-	float: left;
+	
 	width: 100%;
 	display: block;
-	padding-left: 20px;
+	
 	background-color: #33cec3;
 	color: #00665e;
-	margin-bottom: 20px;
+}
+
+article {
+	display: block;
 }
 
 footer {
@@ -35,21 +38,24 @@ footer {
 	clear: left;
 }*/
 
-h2 {
+h1 {
 	background-color: #00665e;
 	color: #5dcec6;
-	margin: 10px auto;
+	margin: 0;
 	padding: 10px;
 }
 
 h5, h3 {
 	margin: 10px auto 10px 10px;
 	padding: 10px;
+	background-color: 
 }
 
 input {
 	margin: 10px auto 10px 10px;
 }
+
+
 
 span.new-search-item, span.cancel, span.destroy, span.edit, span.add{
 	font-size: 10pt;
@@ -58,9 +64,13 @@ span.new-search-item, span.cancel, span.destroy, span.edit, span.add{
 	padding: 7px 10px 7px 10px;
 	background-color: #33c3d7;
 	color: #00665e;
-	margin: 10px 0 0 10px;
+	margin: 100px 20px 30px 10px;
 	border-radius: 5px;
 }
+/*
+span.add {
+	margin-top: 50px;
+}*/
 
 a:link, a:visited{
 	font-size: 10pt;
@@ -95,3 +105,11 @@ div.container {
 	background-image: url('/assets/Congress-4A.png');
 }
 
+div#search-item-form {
+	margin-bottom: 10px;
+}
+
+div#search-item-list {
+	width: 400px;
+	background-color: hsl(180,100%,50%);
+}
