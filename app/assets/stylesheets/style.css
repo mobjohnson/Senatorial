@@ -111,5 +111,6 @@ div#search-item-form {
 
 div#search-item-list {
 	width: 400px;
-	background-color: hsl(180,100%,50%);
+	background-color: hsla(180,100%,50%,0.2);
+	z-index: 1;
 }
