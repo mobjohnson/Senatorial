@@ -83,6 +83,11 @@ a:hover, a:active {
 	border-radius: 5px;
 }
 
+div#search-item-list {
+	height: 700px;
+	max-width: 100%;
+	background-image: url('/assets/Congress-2.jpg');
+}
 
 /*Main Body*/
 /*#wrapper {
