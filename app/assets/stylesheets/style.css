@@ -106,6 +106,24 @@ div.container {
 	background-image: url('/assets/Congress-4A.png');
 }
 
+div.floor {
+	display: inline-block;
+	width: 39%;
+	height: 320px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/assets/senate-floor.png');
+	float: right;
+	/*float: left;*/
+}
+
+div.chart {
+	display: inline-block;
+	float: left;
+	/*clear: left;*/
+	width: 60%;
+}
+
 div#search-item-form {
 	margin-bottom: 10px;
 }
