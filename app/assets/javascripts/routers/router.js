@@ -37,6 +37,7 @@ App.Router = Backbone.Router.extend({
     // Hide form, show list
     $('#search-item-form').hide();
     $('#search-item-list').show();
+    $('.add').show();
     // %('#congress-record-list').show();
 
   },
@@ -50,7 +51,8 @@ App.Router = Backbone.Router.extend({
 
     // Fade in form
     $('#search-item-form').fadeIn(500);
-
+    // Fade out Add Search
+    $('.add').fadeOut(500);
   },
 
   editSearchItem: function(searchItemId){
@@ -78,6 +80,8 @@ App.Router = Backbone.Router.extend({
       var activeSearch = new App.SearchItemModel({state1: this.state1, state2: this.state2, phrase: phrase});
         console.log(activeSearch);     
     }
+    // Show Add Search button
+    $('.add').fadeIn(500);
   },
 
   runRecord: function(phrase, bioguideid){
@@ -103,6 +107,9 @@ App.Router = Backbone.Router.extend({
 
     // Show lineChart
     $('#linechart').show();
+
+    
+
   }
 
 });
