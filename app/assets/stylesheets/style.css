@@ -1,3 +1,8 @@
+/*
+		Overall Structure
+*/
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -5,7 +10,6 @@ body {
 }
 
 header {
-	
 	width: 100%;
 	display: block;
 	background-color: #33cec3;
@@ -27,15 +31,11 @@ footer {
 	padding-bottom: 20px;
 	text-align: center;
 	font-style: italic;
-	/*margin-top: 15px;*/
 }
 
-
-/*section {
-	width: 100%;
-	float: left;
-	clear: left;
-}*/
+/*
+		Headers and input
+*/
 
 h1 {
 	background-color: #00665e;
@@ -54,7 +54,9 @@ input {
 	margin: 10px auto 10px 10px;
 }
 
-
+/*
+	Spans and links
+*/
 
 span.new-search-item, span.cancel, span.destroy, span.edit, span.add{
 	font-size: 10pt;
@@ -68,10 +70,6 @@ span.new-search-item, span.cancel, span.destroy, span.edit, span.add{
 	position: relative;
 	top: 5px;
 }
-/*
-span.add {
-	margin-top: 50px;
-}*/
 
 a:link, a:visited{
 	font-size: 10pt;
@@ -94,6 +92,10 @@ a:hover, a:active {
 	margin: 10px 0 0 10px;
 	border-radius: 5px;
 }
+
+/*
+		Div classes
+*/
 
 div.container {
 	display: block;
@@ -123,6 +125,10 @@ div.chart {
 	/*clear: left;*/
 	width: 60%;
 }
+
+/*
+		Div ids
+*/
 
 div#search-item-form {
 	display: none;
