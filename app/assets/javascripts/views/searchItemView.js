@@ -75,9 +75,7 @@ var SearchItemView = Backbone.View.extend({
 
   onDestroy: function(){
     var self = this;
-
-    if (confirm('Are you sure?')){
-      this.model.destroy({
+    this.model.destroy({
         success: function(model, response, options){
           self.remove();
         },
@@ -85,7 +83,17 @@ var SearchItemView = Backbone.View.extend({
           alert("Your Search Item could not be destroyed.");
         }
       });
-    }
+    // Annoying pop-up box;
+    // if (confirm('Are you sure?')){
+    //   this.model.destroy({
+    //     success: function(model, response, options){
+    //       self.remove();
+    //     },
+    //     error: function(model, response, options){
+    //       alert("Your Search Item could not be destroyed.");
+    //     }
+    //   });
+    // }
   },
 
 
