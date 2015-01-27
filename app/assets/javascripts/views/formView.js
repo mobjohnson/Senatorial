@@ -41,7 +41,9 @@ App.SearchItemFormView = Backbone.View.extend({
       success: function(){
         $('input').val('');
         $('#search-item-form').hide(100);
-        App.router.navigate('')
+
+        $('.add').show(100);
+        App.router.navigate('');
       }
     });
   },

@@ -71,7 +71,7 @@ var SearchItemView = Backbone.View.extend({
     $('html, body').animate({
       scrollTop: $("#senator-list").offset().top
     }, 1000);
-    
+
   },
 
   onEdit: function(){
@@ -81,13 +81,14 @@ var SearchItemView = Backbone.View.extend({
   onDestroy: function(){
     var self = this;
     this.model.destroy({
-        success: function(model, response, options){
-          self.remove();
-        },
-        error: function(model, response, options){
-          alert("Your Search Item could not be destroyed.");
-        }
-      });
+      success: function(model, response, options){
+        self.remove();
+      },
+      error: function(model, response, options){
+        alert("Your Search Item could not be destroyed.");
+      }
+    });
+    
     // Annoying pop-up box;
     // if (confirm('Are you sure?')){
     //   this.model.destroy({

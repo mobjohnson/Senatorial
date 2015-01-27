@@ -27,7 +27,7 @@ footer {
 	padding-bottom: 20px;
 	text-align: center;
 	font-style: italic;
-	margin-top: 15px;
+	/*margin-top: 15px;*/
 }
 
 
@@ -125,6 +125,7 @@ div.chart {
 }
 
 div#search-item-form {
+	display: none;
 	margin-bottom: 10px;
 }
 
@@ -135,16 +136,4 @@ div#search-item-list {
 	padding: 10px 0 20px 0;
 }
 
-/*.group:before,
-.group:after {
-	content: " ";
-	display: table;
-}
 
-.group:after {
-	clear: both;
-}
-
-.group {
-	zoom: 1;
-}*/

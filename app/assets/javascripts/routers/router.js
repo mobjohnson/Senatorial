@@ -38,8 +38,7 @@ App.Router = Backbone.Router.extend({
     $('#search-item-form').hide();
     $('#search-item-list').show();
     $('.add').show();
-    // %('#congress-record-list').show();
-
+    // $('#senator-list').hide();
   },
 
   newSearchItem: function(){
@@ -81,7 +80,7 @@ App.Router = Backbone.Router.extend({
         console.log(activeSearch);     
     }
     // Show Add Search button
-    $('.add').fadeIn(500);
+    $('.add').show(500);
   },
 
   runRecord: function(phrase, bioguideid){
@@ -91,8 +90,12 @@ App.Router = Backbone.Router.extend({
       var activeCongressRecord = new App.CongressRecordModel({phrase: this.phrase, bioguideid: bioguideid});
       console.log(activeCongressRecord);
     }
+    $('.add').show(500);
   },
 
+  // 
+  // Not yet implemented
+  // 
   loadChart: function(senatorName, recordCounts){
     console.log('in loadChart', senatorName, recordCounts);
  
