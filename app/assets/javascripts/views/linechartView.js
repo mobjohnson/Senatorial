@@ -1,5 +1,9 @@
 console.log('linechartView.js is connected');
 
+  // 
+  // Not yet implemented
+  // 
+
 var LinechartView = Backbone.View.extend({
   el: '#linechart',
 
