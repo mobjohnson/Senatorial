@@ -94,6 +94,22 @@ a:hover, a:active {
 }
 
 /*
+		Div ids
+*/
+
+div#search-item-form {
+	display: none;
+	margin-bottom: 10px;
+}
+
+div#search-item-list {
+	width: 400px;
+	background-color: hsla(180,100%,50%,0.3);
+	z-index: 1;
+	padding: 10px 0 20px 0;
+}
+
+/*
 		Div classes
 */
 
@@ -115,31 +131,36 @@ div.floor {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url('/assets/senate-floor.png');
+	float: left;
+}
+
+div.chart-text {
+	display: inline-block;
+	width: 60%;
+	height: 320px;
+/*	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/assets/senate-floor3.png');*/
+	float: left;
+}
+
+div.podium {
+	display: inline-block;
+	width: 39%;
+	height: 320px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/assets/senate-floor3.jpg');
 	float: right;
-	/*float: left;*/
 }
 
 div.chart {
 	display: inline-block;
-	float: left;
+	float: right;
 	/*clear: left;*/
 	width: 60%;
 }
 
-/*
-		Div ids
-*/
 
-div#search-item-form {
-	display: none;
-	margin-bottom: 10px;
-}
-
-div#search-item-list {
-	width: 400px;
-	background-color: hsla(180,100%,50%,0.3);
-	z-index: 1;
-	padding: 10px 0 20px 0;
-}
 
 
