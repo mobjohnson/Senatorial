@@ -134,10 +134,12 @@ div.floor {
 	float: left;
 }
 
-div.chart-text {
+div.bottom-chart-text {
 	display: inline-block;
 	width: 60%;
 	height: 320px;
+	background-color: #33cec3;
+	color: #00665e;
 /*	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url('/assets/senate-floor3.png');*/
