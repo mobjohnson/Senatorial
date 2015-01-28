@@ -47,7 +47,11 @@ h1 {
 h5, h3 {
 	margin: 10px auto 10px 10px;
 	padding: 10px;
-	background-color: 
+	color: #00665e;;
+}
+
+div#search-item-list h3 {
+	color: #1A4A00;
 }
 
 input {
@@ -126,7 +130,7 @@ div.container {
 
 div.floor {
 	display: inline-block;
-	width: 39%;
+	width: 40%;
 	height: 320px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -148,7 +152,7 @@ div.bottom-chart-text {
 
 div.podium {
 	display: inline-block;
-	width: 39%;
+	width: 40%;
 	height: 320px;
 	background-position: center;
 	background-repeat: no-repeat;
