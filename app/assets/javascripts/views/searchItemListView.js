@@ -25,6 +25,10 @@ App.SearchItemListView = Backbone.View.extend({
     this.collection.each(function(searchItem){
       this.addOne(searchItem);
     },this);
+     // Transition to linechart
+    $('html, body').animate({
+      scrollTop: $("#senator-list").offset().top
+    }, 1000);
   },
 
   showForm: function() {

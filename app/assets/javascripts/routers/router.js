@@ -83,6 +83,7 @@ App.Router = Backbone.Router.extend({
       var activeSearch = new App.SearchItemModel({state1: this.state1, state2: this.state2, phrase: phrase});
         console.log(activeSearch);     
     }
+
     // Show Add Search button
     $('.add').show(500);
   },

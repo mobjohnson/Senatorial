@@ -68,10 +68,6 @@ var SearchItemView = Backbone.View.extend({
 
     this.$el.html(this.template(this.model.toJSON()));
 
-    $('html, body').animate({
-      scrollTop: $("#senator-list").offset().top
-    }, 1000);
-
   },
 
   onEdit: function(){

@@ -133,16 +133,6 @@ div.container {
 	background-image: url('/assets/Congress-4A.png');
 }
 
-div.floor {
-	display: inline-block;
-	width: 40%;
-	height: 320px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-image: url('/assets/senate-floor.png');
-	float: left;
-}
-
 div.bottom-chart-text {
 	display: inline-block;
 	width: 60%;
@@ -165,11 +155,22 @@ div.podium {
 	float: right;
 }
 
+div.floor {
+	display: inline-block;
+	width: 40%;
+	height: 360px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('/assets/senate-floor.jpg');
+	float: left;
+}
+
 div.chart {
 	display: inline-block;
 	float: right;
 	/*clear: left;*/
 	width: 60%;
+	height: 360px;
 }
 
 
