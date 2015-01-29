@@ -50,8 +50,10 @@ App.Router = Backbone.Router.extend({
 
     // Fade in form
     $('#search-item-form').fadeIn(500);
-    // Fade out Add Search
-    $('.add').fadeOut(500);
+
+    // Hide Search button
+    $('.add').hide(500);
+
   },
 
   editSearchItem: function(searchItemId){
