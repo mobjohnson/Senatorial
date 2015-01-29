@@ -49,12 +49,10 @@ App.Router = Backbone.Router.extend({
     App.Views.searchItemFormView.render();
 
     // Hide Search button
-    $('.add').hide(500);
+    // $('.add').hide();
 
     // Fade in form
     $('#search-item-form').fadeIn(500);
-
-  
 
   },
 
@@ -86,6 +84,11 @@ App.Router = Backbone.Router.extend({
 
     // Show Add Search button
     $('.add').show(500);
+
+    // Transition to linechart
+    $('html, body').animate({
+      scrollTop: $("#senator-list").offset().top
+    }, 2000);
   },
 
   runRecord: function(phrase, bioguideid){

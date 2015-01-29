@@ -18,6 +18,10 @@ App.SearchItemListView = Backbone.View.extend({
     console.log('inside searchItemListView#addOne this:', this);
     var searchItemView = new SearchItemView({ model: searchItem});
     searchItemView.$el.insertAfter(this.$('span.add'));
+  // Transition to linechart
+    $('html, body').animate({
+      scrollTop: $("#senator-list").offset().top
+    }, 2000);
   },
 
   addAll: function(){
@@ -25,10 +29,6 @@ App.SearchItemListView = Backbone.View.extend({
     this.collection.each(function(searchItem){
       this.addOne(searchItem);
     },this);
-     // Transition to linechart
-    $('html, body').animate({
-      scrollTop: $("#senator-list").offset().top
-    }, 1000);
   },
 
   showForm: function() {
