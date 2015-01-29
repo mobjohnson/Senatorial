@@ -48,11 +48,13 @@ App.Router = Backbone.Router.extend({
     // Re-render form view without model
     App.Views.searchItemFormView.render();
 
+    // Hide Search button
+    $('.add').hide(500);
+
     // Fade in form
     $('#search-item-form').fadeIn(500);
 
-    // Hide Search button
-    $('.add').hide(500);
+  
 
   },
 

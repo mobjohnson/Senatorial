@@ -57,7 +57,7 @@ div#search-item-list h3 {
 input {
 	margin: 10px auto 10px 10px;
 	position: relative;
-	top: 5px;
+	top: 15px;
 }
 
 /*
@@ -74,7 +74,7 @@ span.new-search-item, span.cancel, span.destroy, span.edit, span.add{
 	margin: 10px 20px 30px 10px;
 	border-radius: 5px;
 	position: relative;
-	top: 5px;
+	top: 15px;
 }
 
 a:link, a:visited{
@@ -112,8 +112,10 @@ div.search-item {
 	width: 400px;
 	background-color: hsla(180,100%,50%,0.3);
 	z-index: 1;
-	padding: 0 0 20px 0;
+	padding: 0 0 30px 0;
 	margin: 20px 0;
+	position: relative;
+	top: 10px;
 }
 
 /*
