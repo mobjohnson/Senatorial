@@ -42,7 +42,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 ruby '2.1.2'
 
