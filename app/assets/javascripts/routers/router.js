@@ -58,7 +58,7 @@ App.Router = Backbone.Router.extend({
 
   editSearchItem: function(searchItemId){
     // Hide list
-    $('#search-item-list').hide();
+    // $('#search-item-list').hide();
 
     // Find the specific searchItem model to edit
     var searchItem = App.Collections.searchItems.get(searchItemId);
@@ -84,11 +84,6 @@ App.Router = Backbone.Router.extend({
 
     // Show Add Search button
     $('.add').show(500);
-
-    // Transition to linechart
-    $('html, body').animate({
-      scrollTop: $("#senator-list").offset().top
-    }, 2000);
   },
 
   runRecord: function(phrase, bioguideid){
@@ -98,7 +93,7 @@ App.Router = Backbone.Router.extend({
       var activeCongressRecord = new App.CongressRecordModel({phrase: this.phrase, bioguideid: bioguideid});
       console.log(activeCongressRecord);
     }
-    $('.add').show(500);
+    // $('.add').show(500);
   },
 
   // 
