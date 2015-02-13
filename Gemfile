@@ -53,3 +53,7 @@ gem 'rails-erd'
 gem 'd3-rails'
 
 gem 'c3-rails'
+
+gem 'newrelic_rpm'
+
+
